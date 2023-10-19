@@ -46,3 +46,11 @@ def count_price_string(s):
 
 string = input()
 print(count_price_string(string))
+
+
+
+# СТОИМОСТЬ СТРОКИ (ОТ ПРЕПОДАВАТЕЛЯ)
+string = input()
+price = 60 * len(string)
+
+print(f'{price // 100} р. {price % 100} коп.')
