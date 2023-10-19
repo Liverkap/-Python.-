@@ -20,16 +20,29 @@
 
 # ИНДЕКСЫ МАССЫ ТЕЛА
 
-def find_body_mass_index(weight, hight):
-    return weight / hight ** 2
+# def find_body_mass_index(weight, hight):
+#     return weight / hight ** 2
+#
+# weight, hight = float(input()), float(input())
+#
+# imt = find_body_mass_index(weight, hight)
+#
+# if imt < 18.5:
+#     print('Недостаточная масса')
+# elif imt > 25:
+#     print('Избыточная масса')
+# else:
+#     print('Оптимальная масса')
 
-weight, hight = float(input()), float(input())
 
-imt = find_body_mass_index(weight, hight)
+# СТОИМОСТЬ СТРОКИ
 
-if imt < 18.5:
-    print('Недостаточная масса')
-elif imt > 25:
-    print('Избыточная масса')
-else:
-    print('Оптимальная масса')
+def count_price_string(s):
+    total_price = 0
+    for _ in range(len(s)):
+        total_price += 60
+
+    return f'{total_price // 100} р. {total_price % 100} коп.'
+
+string = input()
+print(count_price_string(string))
