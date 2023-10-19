@@ -37,20 +37,27 @@
 
 # СТОИМОСТЬ СТРОКИ
 
-def count_price_string(s):
-    total_price = 0
-    for _ in range(len(s)):
-        total_price += 60
+# def count_price_string(s):
+#     total_price = 0
+#     for _ in range(len(s)):
+#         total_price += 60
+#
+#     return f'{total_price // 100} р. {total_price % 100} коп.'
+#
+# string = input()
+# print(count_price_string(string))
+#
+#
+#
+# # СТОИМОСТЬ СТРОКИ (ОТ ПРЕПОДАВАТЕЛЯ)
+# string = input()
+# price = 60 * len(string)
+#
+# print(f'{price // 100} р. {price % 100} коп.')
 
-    return f'{total_price // 100} р. {total_price % 100} коп.'
 
-string = input()
-print(count_price_string(string))
+# КОЛИЧЕСТВО СЛОВ
 
-
-
-# СТОИМОСТЬ СТРОКИ (ОТ ПРЕПОДАВАТЕЛЯ)
-string = input()
-price = 60 * len(string)
-
-print(f'{price // 100} р. {price % 100} коп.')
+# string = input().split()
+#
+# print(len(string))
