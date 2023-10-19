@@ -12,7 +12,24 @@
 
 # НА EASY (ОТ ПОЛЬЗОВАТЕЛЯ)
 
-a, b = int(input()), int(input())
+# a, b = int(input()), int(input())
+#
+# for i in [a + b, a - b, a * b, a / b, a // b, a % b, (a ** 10 + b ** 10) ** 0.5]:
+#     print(i)
 
-for i in [a + b, a - b, a * b, a / b, a // b, a % b, (a ** 10 + b ** 10) ** 0.5]:
-    print(i)
+
+# ИНДЕКСЫ МАССЫ ТЕЛА
+
+def find_body_mass_index(weight, hight):
+    return weight / hight ** 2
+
+weight, hight = float(input()), float(input())
+
+imt = find_body_mass_index(weight, hight)
+
+if imt < 18.5:
+    print('Недостаточная масса')
+elif imt > 25:
+    print('Избыточная масса')
+else:
+    print('Оптимальная масса')
