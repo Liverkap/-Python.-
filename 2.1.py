@@ -81,24 +81,19 @@
 # ПЕРЕВОРОТ ЧИСЛА
 
 # n = int(input())
-# # n = [n[i] for i in str(int(input()))]
-# # my_list = []
-# string = ''
-# for i in range(len(n)):
-#     # print(str(n)[i])
-#     string += str(n)[i]
+#
+# if len(str(n)) == 5:
+#     print(int(str(n)[::-1]))
+# else:
+#     reversed_s = ''.join(reversed(str(n)[1:]))
+#     print(int(str(n)[:1] + reversed_s))
 #
 #
-# # while n > 0:
-# #     if len(str(n)) == 5:
-# #         last_digit = n % 10
-# #         my_list.append(last_digit)
-# #
-# #     n = n // 10
+# # ПЕРЕВОРОТ ЧИСЛА (ОТ ПРЕПОДАВАТЕЛЯ)
+# n = input()
+# new_n = int(n[:-5] + n[-5:][::-1])
 #
-#
-#
-# print(string)
+# print(new_n)
 
 
 # STANDART AMERICAN CONVENTION
