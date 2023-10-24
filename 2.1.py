@@ -95,6 +95,10 @@
 #
 # print(new_n)
 
+# ПЕРЕВОРОТ ЧИСЛА (ОТ ПОЛЬЗОВАТЕЛЯ) (в 2 строки)
+# s = input()
+# print(int(s[:-5] + s[-1:-6:-1]))
+
 
 # STANDART AMERICAN CONVENTION
 
