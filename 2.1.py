@@ -64,3 +64,73 @@
 
 
 # ЗОДИАК
+
+zodiac = ['Обезьяна', 'Петух', 'Собака', 'Свинья', 'Крыса', 'Бык', 'Тигр', 'Заяц', 'Дракон', 'Змея', 'Лошадь', 'Овца']
+
+year = int(input())
+
+print(zodiac[year % 12])
+
+
+# ПЕРЕВОРОТ ЧИСЛА
+
+# n = int(input())
+# # n = [n[i] for i in str(int(input()))]
+# # my_list = []
+# string = ''
+# for i in range(len(n)):
+#     # print(str(n)[i])
+#     string += str(n)[i]
+#
+#
+# # while n > 0:
+# #     if len(str(n)) == 5:
+# #         last_digit = n % 10
+# #         my_list.append(last_digit)
+# #
+# #     n = n // 10
+#
+#
+#
+# print(string)
+
+
+# STANDART AMERICAN CONVENTION
+
+# def add_comma(num):
+#     if num < 999:
+#         return num
+#
+
+
+# n = 1000000
+# my_list = []
+# for i in range(len(str(n))):
+#     my_list.append(str(n)[i])
+#
+# print(my_list)
+# my_list.reverse()
+# # print(my_list)
+# # print(sec_list)
+# for _ in range(0, len(str(n)), 3):
+#     my_list.append(',')
+# print(my_list)
+# n = int(input())
+# my_list = []
+#
+# for c in str(n):
+#     my_list.append(c)
+#
+# if 1000 <= n <= 9999:
+#     my_list.insert(1, ',')
+#
+# elif
+#
+# print(*my_list, sep='')
+# # x = str(n).split()
+# # print(x)
+# # if 1000 <= n <= 9999:
+# #     x.insert(2, ',')
+# # print(*x)
+
+# print(10 **100)
