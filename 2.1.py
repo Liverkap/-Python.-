@@ -124,7 +124,7 @@ print(zodiac[year % 12])
 # if 1000 <= n <= 9999:
 #     my_list.insert(1, ',')
 #
-# elif
+
 #
 # print(*my_list, sep='')
 # # x = str(n).split()
