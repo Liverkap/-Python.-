@@ -102,40 +102,23 @@
 
 # STANDART AMERICAN CONVENTION
 
-# def add_comma(num):
-#     if num < 999:
-#         return num
-#
+
+# print('{:,}'.format(int(input())))
 
 
-# n = 1000000
-# my_list = []
-# for i in range(len(str(n))):
-#     my_list.append(str(n)[i])
-#
-# print(my_list)
-# my_list.reverse()
-# # print(my_list)
-# # print(sec_list)
-# for _ in range(0, len(str(n)), 3):
-#     my_list.append(',')
-# print(my_list)
-# n = int(input())
-# my_list = []
-#
-# for c in str(n):
-#     my_list.append(c)
-#
-# if 1000 <= n <= 9999:
-#     my_list.insert(1, ',')
-#
+# STANDART AMERICAN CONVENTION (ОТ ПРЕПОДАВАТЕЛЯ)
 
-#
-# print(*my_list, sep='')
-# # x = str(n).split()
-# # print(x)
-# # if 1000 <= n <= 9999:
-# #     x.insert(2, ',')
-# # print(*x)
+seq = list(input())
 
-# print(10 **100)
+new_s = ''
+
+while len(seq) >= 3:
+    new_s += seq.pop(-1) + seq.pop(-1) + seq.pop(-1) + ','
+
+new_s += ''.join(seq[::-1])
+
+new_s = new_s[::-1]
+new_s = new_s.lstrip(',')
+
+print(new_s)
+
