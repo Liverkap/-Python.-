@@ -133,3 +133,26 @@
 #     print("ДА")
 # else:
 #     print("НЕТ")
+
+
+# КАМЕНЬ, НОЖНИЦЫ, БУМАГА
+
+# def chek_res(name1, name2):
+#     if name1 == name2:
+#         return 'ничья'
+#     elif name1 == 'камень' and name2 == 'ножницы':
+#         return 'Тимур'
+#
+# Timur = input()
+# Ruslan = input()
+
+
+# ОРЕЛ И РЕШКА
+
+# string = input().split('О')
+#
+# print(len(max(string)))
+
+
+
+
