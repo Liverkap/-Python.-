@@ -75,7 +75,7 @@
 # print(count)
 #
 #
-# # РАЗЛИЧНЫЕ ЭЛЕМЕНТЫ (ОТ ПРЕПОДАВАТЕЛЯ)
+# # РАЗЛИЧНЫЕ ЭЛЕМЕНТЫ (ОТ ПРЕПОДАВАТЕЛЯ)"
 #
 # numbers = input().split()
 # counter = 1
@@ -96,3 +96,40 @@
 #         a.append(i)
 # print(len(a))
 
+
+# ПРОИЗВЕДЕНИЕ ЧИСЕЛ
+
+# n = int(input())
+#
+# numbers = [int(input()) for _ in range(n)]
+# flag = False
+# product_num = int(input())
+#
+# for i in range(1, n):
+#     for j in range(i):
+#         if numbers[i] * numbers[j] == product_num:
+#             flag = True
+#             break
+#
+# if flag is True:
+#     print('ДА')
+# else:
+#     print('НЕТ')
+#
+#
+# # ПРОИЗВЕДЕНИЕ ЧИСЕЛ (ОТ ПРЕПОДАВАТЕЛЯ)
+#
+# size = int(input())
+# seq = [int(input()) for _ in range(size)]
+# number = int(input())
+# flag = False
+#
+# for i in range(size):
+#     for j in range(size):
+#         if i != j and seq[i] * seq[j] == number:
+#             flag = True
+#
+# if flag:
+#     print("ДА")
+# else:
+#     print("НЕТ")
