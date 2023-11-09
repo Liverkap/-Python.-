@@ -164,16 +164,57 @@
 
 # ТРЕУГОЛЬНИК ПАСКАЛЯ
 
-from math import factorial
-
-from math import factorial
-n = int(input())
-
-my_list = [1] * (n + 1)
 
 
-for i in range(1, n):
-# for j in range(i):
-    my_list[i] = factorial(n) // (factorial(my_list[i]) * factorial(n - my_list[i]))
+# from math import factorial
+# n = int(input())
+#
+# my_list = [1] * (n + 1)
+#
+#
+# for i in range(1, n):
+# # for j in range(i):
+#     my_list[i] = factorial(n) // (factorial(my_list[i]) * factorial(n - my_list[i]))
+#
+# print(my_list)
 
-print(my_list)
+
+# ТРЕУГОЛЬНИК ПАСКАЛЯ 2
+
+# n = int(input())
+#
+# my_list = []
+#
+# for i in range(n):
+#     new_list = []
+#     for j in range(i + 1):
+#         new_list.append(i)
+#         my_list.append(new_list)
+#     print(my_list)
+
+
+# УПАКОВКА ДУБЛИКАТОВ
+
+# s = input().split()
+#
+# print(s)
+# my_list = []
+#
+# for i in range(len(s)):
+#     my_list.append([s[i]])
+#
+# print(my_list)
+
+
+# s = [[i] for i in range(len(input().split()))]
+#
+# s = [[c] for c in input().split()]
+#
+# my_list = []
+#
+# for i in range(len(s)):
+#     if s[i] == s[i + 1]:
+#         my_list[i] = s[i + 1]
+#
+#
+# print(s)
