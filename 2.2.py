@@ -140,11 +140,33 @@
 # def chek_res(name1, name2):
 #     if name1 == name2:
 #         return 'ничья'
-#     elif name1 == 'камень' and name2 == 'ножницы':
+#     elif name1 == 'камень' and name2 != 'бумага' or name1 == 'ножницы' and name2 != 'камень' or name1 == 'бумага' and name2 != 'ножницы' :
 #         return 'Тимур'
+#     else:
+#         return 'Руслан'
 #
-# Timur = input()
-# Ruslan = input()
+# timur = input()
+# ruslan = input()
+#
+# print(chek_res(timur, ruslan))
+
+# # КАМЕНЬ, НОЖНИЦЫ, БУМАГА (ОТ ПРЕПОДАВАТЕЛЯ)
+# options = ["камень", "ножницы", "бумага"]
+# results = ["ничья", "Руслан", "Тимур"]
+#
+# timur_move = input()
+# ruslan_move = input()
+#
+# case = options.index(timur_move) - options.index(ruslan_move)
+# res = results[case]
+#
+# print(res)
+
+# КАМЕНЬ, НОЖНИЦЫ, БУМАГА (ОТ ПОЛЬЗОВАТЕЛЯ)
+a, b = input(), input()
+print('ничья' if a == b else 'Тимур' if a + b in ('каменьножницы', 'бумагакамень', 'ножницыбумага') else 'Руслан')
+
+
 
 
 # ОРЕЛ И РЕШКА
@@ -157,10 +179,10 @@
 
 # РОСКОМНАДЗОР ЗАПРЕТИЛ БУКВУ А
 
-string = input() + ' ' + 'запретил букву'
-alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-
-print(string)
+# string = input() + ' ' + 'запретил букву'
+# alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+#
+# print(string)
 
 
 
