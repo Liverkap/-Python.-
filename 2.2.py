@@ -199,6 +199,31 @@
 #
 # print(len(max(string)))
 
+# КРЕМНИЕВАЯ ДОЛИНА
+
+n = int(input())
+
+my_list = []
+
+for _ in range(n):
+    my_list.append(input())
+
+virus = 'anton'
+v = []
+
+for i in range(len(my_list)):
+    check_list = []
+    holod = []
+    for j in range(len(my_list[i])):
+        #holod = []
+        if my_list[i][j] in virus:
+            holod += my_list[i][j]
+    #print(holod)
+    if ''.join(holod) == virus:
+        ''.join(holod)
+        v.append(my_list.index(my_list[i]) + 1)
+print(*v)
+
 
 
 # РОСКОМНАДЗОР ЗАПРЕТИЛ БУКВУ А
