@@ -1,3 +1,56 @@
+# КООРДИНАТНЫЕ ЧЕТВЕРТИ
+
+# n = int(input())
+#
+# my_list = []
+#
+# for _ in range(n):
+#     my_list.append(input().split())
+#
+# count_1 = 0
+# count_2 = 0
+# count_3 = 0
+# count_4 = 0
+#
+# for c in my_list:
+#     if int(c[0]) > 0 and int(c[1]) > 0:
+#         count_1 += 1
+#     elif int(c[0]) < 0 and int(c[1]) > 0:
+#         count_2 += 1
+#     elif int(c[0]) < 0 and int(c[1]) < 0:
+#         count_3 += 1
+#     elif int(c[0]) > 0 and int(c[1]) < 0:
+#         count_4 += 1
+#
+# print(f'Первая четверть: {count_1}')
+# print(f'Вторая четверть: {count_2}')
+# print(f'Третья четверть: {count_3}')
+# print(f'Четвертая четверть: {count_4}')
+
+
+# КООРДИНАТНЫЕ ЧЕТВЕРТИ (ОТ ПРЕПОДАВАТЕЛЯ)
+
+n = int(input())
+
+count = [0] * 4
+names = ['Первая четверть:', 'Вторая четверть:', 'Третья четверть:', 'Четвертая четверть:']
+
+for _ in range(n):
+    x, y = [int(num) for num in input().split()]
+    if x > 0 and y > 0:
+        count[0] += 1
+    elif x < 0 and y > 0:
+        count[1] += 1
+    elif x < 0 and y < 0:
+        count[2] += 1
+    elif x > 0 and y < 0:
+        count[3] += 1
+
+for i in range(4):
+    print(names[i], count[i])
+
+
+
 
 
 
@@ -201,28 +254,28 @@
 
 # КРЕМНИЕВАЯ ДОЛИНА
 
-n = int(input())
-
-my_list = []
-
-for _ in range(n):
-    my_list.append(input())
-
-virus = 'anton'
-v = []
-
-for i in range(len(my_list)):
-    check_list = []
-    holod = []
-    for j in range(len(my_list[i])):
-        #holod = []
-        if my_list[i][j] in virus:
-            holod += my_list[i][j]
-    #print(holod)
-    if ''.join(holod) == virus:
-        ''.join(holod)
-        v.append(my_list.index(my_list[i]) + 1)
-print(*v)
+# n = int(input())
+#
+# my_list = []
+#
+# for _ in range(n):
+#     my_list.append(input())
+#
+# virus = 'anton'
+# v = []
+#
+# for i in range(len(my_list)):
+#     check_list = []
+#     holod = []
+#     for j in range(len(my_list[i])):
+#         #holod = []
+#         if my_list[i][j] in virus:
+#             holod += my_list[i][j]
+#     #print(holod)
+#     if ''.join(holod) == virus:
+#         ''.join(holod)
+#         v.append(my_list.index(my_list[i]) + 1)
+# print(*v)
 
 
 
