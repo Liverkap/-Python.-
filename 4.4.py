@@ -219,3 +219,193 @@
 #     for i in range(n):
 #         print(matrix[i][j], end=' ')
 #     print()
+
+
+# СЛЕД МАТРИЦЫ
+# Следом квадратной матрицы называется сумма элементов главной диагонали
+
+
+# n = int(input())
+# matrix = []
+#
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+# total = 0
+#
+# for i in range(n):
+#     total += matrix[i][i]
+#
+# print(total)
+
+
+# СЛЕД МАТРИЦЫ (ОТ ПРЕПОДАВАТЕЛЯ)
+
+# n = int(input())
+#
+# sm = 0
+#
+# for i in range(n):
+#     cur_seq = input().split()
+#     sm += int(cur_seq[i])
+#
+
+# # СЛЕД МАТРИЦЫ (ОТ ПОЛЬЗОВАТЕЛЯ)
+# res = 0
+# for i in range(int(input())):
+#     res += int(input().split()[i])
+# print(res)
+
+
+# БОЛЬШЕ СРЕДНЕГО
+
+# n = int(input())
+#
+# matrix = []
+#
+# for _ in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+#
+#
+# for i in range(n):
+#     seq = sum(matrix[i]) / len(matrix[i])
+#     count = 0
+#     for j in range(n):
+#         if matrix[i][j] > seq:
+#             count += 1
+#     print(count)
+
+# БОЛЬШЕ СРЕДНЕГО (С СОЗДАНИЕМ ФУНКЦИИ СОЗДАНИЯ МАТРИЦЫ)
+# def create_matrix(n):
+#     matrix = [[int(num) for num in input().split()] for _ in range(n)]
+#     return matrix
+#
+#
+# n = int(input())
+# my_matrix = create_matrix(n)
+#
+# for i in range(n):
+#     seq = sum(my_matrix[i]) / len(my_matrix[i])
+#     count = 0
+#     for j in range(n):
+#         if my_matrix[i][j] > seq:
+#             count += 1
+#     print(count)
+
+
+# МАКСИМАЛЬНЫЙ В ОБЛАСТИ 1
+
+# def create_matrix(n):
+#     matrix = [[int(num) for num in input().split()] for _ in range(n)]
+#     return matrix
+#
+# n = int(input())
+# my_matrix = create_matrix(n)
+#
+# maximum = -1000
+#
+# for i in range(n):
+#     for j in range(n):
+#         if (i >= j and i <= n - 1 - j) or (i >= j and i >= n - 1 - j):
+#             if my_matrix[i][j] > maximum:
+#                 maximum = my_matrix[i][j]
+#
+# print(maximum)
+
+# МАКСИМАЛЬНЫЙ В ОБЛАСТИ 1 (ОТ ПРЕПОДАВАТЕЛЯ)
+
+# n = int(input())
+# matrix = []
+#
+# for _ in range(n):
+#     row = [int(i) for i in input().split()]
+#     matrix.append(row)
+#
+# largest = matrix[0][0]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i >= j and matrix[i][j] > largest:
+#             largest = matrix[i][j]
+#
+# print(largest)
+
+
+# МАКСИМАЛЬНЫЙ В ОБЛАСТИ 2
+
+# def create_matrix(n):
+#     matrix = [[int(num) for num in input().split()] for _ in range(n)]
+#     return matrix
+#
+# n = int(input())
+# my_matrix = create_matrix(n)
+#
+# maximum = my_matrix[0][0]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if (i >= j and i <= n - 1 - j) or (i <= j and i >= n - 1 - j):
+#             if my_matrix[i][j] > maximum:
+#                 maximum = my_matrix[i][j]
+#
+# print(maximum)
+
+
+# СУММЫ ЧЕТВЕРТЕЙ
+
+# def create_matrix(n):
+#     matrix = [[int(num) for num in input().split()] for _ in range(n)]
+#     return matrix
+#
+# n = int(input())
+# my_matrix = create_matrix(n)
+#
+# up_quater = 0
+# right_quater = 0
+# down_quater = 0
+# left_quater = 0
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i > j and i < n - 1 - j:
+#             left_quater += my_matrix[i][j]
+#         elif i > j and i > n - 1 - j:
+#             down_quater += my_matrix[i][j]
+#         elif i < j and i > n - 1 - j:
+#             right_quater += my_matrix[i][j]
+#         elif i < j and i < n - 1 - j:
+#             up_quater += my_matrix[i][j]
+#
+# print(f'Верхняя четверть: {up_quater}')
+# print(f'Правая четверть: {right_quater}')
+# print(f'Нижняя четверть: {down_quater}')
+# print(f'Левая четверть: {left_quater}')
+
+
+# СУММЫ ЧЕТВЕРТЕЙ (ОТ ПРЕПОДАВАТЕЛЯ)
+# n = int(input())
+# matrix = []
+# quadrants = [['Верхняя четверть:', 0],
+#              ['Правая четверть:', 0],
+#              ['Нижняя четверть:', 0],
+#              ['Левая четверть:', 0]]
+#
+# for _ in range(n):
+#     row = [int(i) for i in input().split()]
+#     matrix.append(row)
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i < j and i + j + 1 < n :
+#             quadrants[0][1] += matrix[i][j]
+#         elif i < j and i + j + 1 > n:
+#             quadrants[1][1] += matrix[i][j]
+#         elif i > j and i + j + 1 > n:
+#             quadrants[2][1] += matrix[i][j]
+#         elif i > j and i + j + 1 < n:
+#             quadrants[3][1] += matrix[i][j]
+#
+# for i in range(4):
+#     print(quadrants[i][0], quadrants[i][1])
