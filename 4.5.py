@@ -103,7 +103,109 @@
 #     print(*row)
 
 
+# СИММЕТРИЧНАЯ МАТРИЦА
 
+# def create_matrix(n):
+#     matrix = [[int(num) for num in input().split()] for _ in range(n)]
+#     return matrix
+#
+# n = int(input())
+#
+# my_matrix = create_matrix(n)
+#
+# flag = True
+# for i in range(n):
+#     for j in range(n):
+#         if i != j:
+#             if my_matrix[i][j] != my_matrix[j][i]:
+#                 flag = False
+#                 break
+#     if flag is False:
+#         break
+#
+# if flag:
+#     print('YES')
+# else:
+#     print('NO')
+
+
+# СИММЕТРИЧНАЯ МАТРИЦА (ОТ ПРЕПОДАВАТЕЛЯ)
+
+# n = int(input())
+# matrix = [input().split() for _ in range(n)]
+# result = 'YES'
+#
+# for i in range(n):
+#     for j in range(i + 1, n):
+#         if matrix[i][j] != matrix[j][i]:
+#             result = 'NO'
+#             break
+#     if result == 'NO':
+#         break
+#
+# print(result)
+
+
+# ОБМЕН ДИАГОНАЛЯМИ
+
+
+# def create_matrix(n):
+#     matrix = [[int(num) for num in input().split()] for _ in range(n)]
+#     return matrix
+#
+# n = int(input())
+#
+# my_matrix = create_matrix(n)
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i == j:
+#             a = my_matrix[i][j]
+#             b = my_matrix[n-i-1][i]
+#             my_matrix[i][j] = b
+#             my_matrix[n-i-1][i] = a
+#
+# for el in my_matrix:
+#     print(*el)
+
+# ОБМЕН ДИАГОНАЛЯМИ (ОТ ПРЕПОДАВАТЕЛЯ)
+
+
+# n = int(input())
+# matrix = [input().split() for _ in range(n)]
+#
+# for i in range(n):
+#     matrix[i][i], matrix[n - i - 1][i] = matrix[n - i - 1][i], matrix[i][i]
+#
+# for row in matrix:
+#     print(*row)
+
+
+# ЗЕРКАЛЬНОЕ ОТОБРАЖЕНИЕ
+
+# n = int(input())
+# matrix = [input().split() for _ in range(n)]
+#
+# for i in range(n // 2):
+#     matrix[i], matrix[n-i-1] = matrix[n-i-1], matrix[i]
+#
+# for el in matrix:
+#     print(*el)
+
+# ПОВОРОТ МАТРИЦЫ
+
+n = int(input())
+matrix = [input().split() for _ in range(n)]
+
+for i in range(n):
+    for j in range(n):
+        matrix[i][j], matrix[i][n-j-1] = matrix[i][n-j-1], matrix[i][j]
+
+for el in matrix:
+    print(*el)
+
+
+# ХОДЫ КОНЯ
 
 
 
