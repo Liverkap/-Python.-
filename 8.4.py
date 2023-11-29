@@ -141,3 +141,56 @@
 #     print('YES')
 # else:
 #     print('NO')
+
+
+# Все 10 цифр
+#
+# a, b = input(), input()
+# my_set = set(a + b)
+#
+# numbers = set('0123456789')
+#
+# if my_set == numbers:
+#     print('YES')
+# else:
+#     print('NO')
+
+# Все 10 цифр (СПОСОБ ПРОЩЕ)
+
+# my_set = set(input() + input())
+#
+# if len(my_set) == 10:
+#     print('YES')
+# else:
+#     print('NO')
+
+# Все 10 цифр (ОТ ПОЛЬЗОВАТЕЛЯ)(ИСПОЛЬЗУЕМ КОРТЕЖ И ИНДЕКС ОТ НЕГО 1 или 0)
+# print(('NO', 'YES')[len(set(input() + input())) == 10])
+
+
+# Одинаковые наборы
+
+# a, b = set(input()), set(input())
+#
+# if a == b:
+#     print('YES')
+# else:
+#     print('NO')
+# #
+
+# # Одинаковые наборы (ОТ ПОЛЬЗОВАТЕЛЯ)
+# print(['NO', 'YES'][set(input()) == set(input())])
+
+
+# ТРИ СЛОВА
+
+# s = input().split()
+#
+# if set(s[0]) == set(s[1]) == set(s[2]):
+#     print('YES')
+# else:
+#     print('NO')
+
+# ТРИ СЛОВА (ОТ ПОЛЬЗОВАТЕЛЯ)
+# a, b, c = input().split()
+# print(['NO', "YES"][set(a) == set(b) == set(c)])
