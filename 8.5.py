@@ -90,5 +90,59 @@
 #     print(len(set(el.lower())))
 
 # Уникальные символы 1 (ОТ ПОЛЬЗОВАТЕЛЯ)
-for _ in range(int(input())):
-    print(len(set(input().lower())))
+# for _ in range(int(input())):
+#     print(len(set(input().lower())))
+
+
+# УНИКАЛЬНЫЕ СИМВОЛЫ 2
+
+# myset = set()
+#
+# for _ in range(int(input())):
+#     for el in input().lower():
+#         myset.add(el)
+#
+#
+# print(len(myset))
+
+
+# КОЛИЧЕСТВО СЛОВ В ТЕКСТЕ
+
+# s = input().split()
+# myset = set()
+#
+# punctuation_marks = '.,;:-?!'
+#
+# for el in s:
+#     myset.add(el.strip(punctuation_marks).lower())
+#
+# print(len(myset))
+#
+# # КОЛИЧЕСТВО СЛОВ В ТЕКСТЕ (ОТ ПРЕПОДАВАТЕЛЯ)
+# words = [word.lower().strip('.,;:-?!') for word in input().split()]
+#
+# print(len(set(words)))
+#
+# # КОЛИЧЕСТВО СЛОВ В ТЕКСТЕ (ОТ ПОЛЬЗОВАТЕЛЯ)
+# text = input().lower()
+# for sign in '.,;:-?!':
+#     text = text.replace(sign, '')
+# print(len(set(text.split())))
+
+
+# Встречалось ли число раньше?
+
+# s = input().split()
+
+s = [int(el) for el in input().split()]
+myset = set()
+
+for el in s:
+    if el in myset:
+        print('YES')
+    else:
+        print('NO')
+        myset.add(el)
+
+
+
