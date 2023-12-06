@@ -83,8 +83,66 @@
 #
 # print(('NO', 'YES')[myset1 >= myset2])
 
+# УРОК ИНФОРМАТИКИ
+
+# myset1 = set([int(el) for el in input().split()])
+# myset2 = set([int(el) for el in input().split()])
+# myset3 = set([int(el) for el in input().split()])
+#
+# f1_f2 = myset1.intersection(myset2)
+# f3 = f1_f2.difference(myset3)
+# print(*sorted(f3, reverse=True))
 
 
+# УРОК ИНФОРМАТИКИ (ОТ ПРЕПОДАВАТЕЛЯ)
+
+# set1 = set(int(i) for i in input().split())
+# set2 = set(int(i) for i in input().split())
+# set3 = set(int(i) for i in input().split())
+#
+# print(*sorted(set1 & set2 - set3, reverse=True))
 
 
+# УРОК МАТЕМАТИКИ
+
+# myset1 = set(int(el) for el in input().split())
+# myset2 = set(int(el) for el in input().split())
+# myset3 = set(int(el) for el in input().split())
+#
+# union1 = (myset1 | myset2 | myset3) - (myset1 & myset2 & myset3)
+#
+# print(*sorted(union1))
+
+# УРОК ФИЗИКИ
+
+# myset1 = set([int(el) for el in input().split()])
+# myset2 = set([int(el) for el in input().split()])
+# myset3 = set([int(el) for el in input().split()])
+#
+#
+# dif1 = myset3.difference(myset2, myset1)
+# print(*sorted(dif1, reverse=True))
+
+# УРОК БИОЛОГИИ
+
+myset1 = set([int(el) for el in input().split()])
+myset2 = set([int(el) for el in input().split()])
+myset3 = set([int(el) for el in input().split()])
+
+marks = set(range(11))
+
+dif = marks - myset1 - myset2 - myset3
+print(*sorted(dif))
+
+# УРОК БИОЛОГИИ (ОТ ПРЕПОДАВАТЕЛЯ)
+
+set1 = set(int(i) for i in input().split())
+set2 = set(int(i) for i in input().split())
+set3 = set(int(i) for i in input().split())
+
+print(*sorted(set(range(11)) - set1 - set2 - set3))
+
+# УРОК БИОЛОГИИ (ОТ ПОЛЬЗОВАТЕЛЯ)
+a, b, c = [{int(i) for i in input().split()} for _ in 'abc']
+print(*sorted(set(range(11)) - (a | b | c)))
 
