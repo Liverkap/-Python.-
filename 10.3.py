@@ -341,33 +341,85 @@
 # print(min(copy_res))
 
 
-pets = [('Hatiko', 'Parker', 'Wilson', 50),
-        ('Rusty', 'Josh', 'King', 25),
-        ('Fido', 'John', 'Smith', 28),
-        ('Butch', 'Jake', 'Smirnoff', 18),
-        ('Odi', 'Emma', 'Wright', 18),
-        ('Balto', 'Josh', 'King', 25),
-        ('Barry', 'Josh', 'King', 25),
-        ('Snape', 'Hannah', 'Taylor', 40),
-        ('Horry', 'Martha', 'Robinson', 73),
-        ('Giro', 'Alex', 'Martinez', 65),
-        ('Zooma', 'Simon', 'Nevel', 32),
-        ('Lassie', 'Josh', 'King', 25),
-        ('Chase', 'Martha', 'Robinson', 73),
-        ('Ace', 'Martha', 'Williams', 38),
-        ('Rocky', 'Simon', 'Nevel', 32)]
 
-result = {}
-
-for i in range(len(pets)):
-    x = list(pets[i])
-    y = x.remove([0])
-    dogs = []
-    dogs.append(y)
-    result.get(dogs)
-print(result)
+# pets = [('Hatiko', 'Parker', 'Wilson', 50),
+#         ('Rusty', 'Josh', 'King', 25),
+#         ('Fido', 'John', 'Smith', 28),
+#         ('Butch', 'Jake', 'Smirnoff', 18),
+#         ('Odi', 'Emma', 'Wright', 18),
+#         ('Balto', 'Josh', 'King', 25),
+#         ('Barry', 'Josh', 'King', 25),
+#         ('Snape', 'Hannah', 'Taylor', 40),
+#         ('Horry', 'Martha', 'Robinson', 73),
+#         ('Giro', 'Alex', 'Martinez', 65),
+#         ('Zooma', 'Simon', 'Nevel', 32),
+#         ('Lassie', 'Josh', 'King', 25),
+#         ('Chase', 'Martha', 'Robinson', 73),
+#         ('Ace', 'Martha', 'Williams', 38),
+#         ('Rocky', 'Simon', 'Nevel', 32)]
+#
+# result = {}
+#
+# for el in pets:
+#     result.setdefault(el[1:], []).append(el[0])
 
 
+# САМОЕ РЕДКОЕ СЛОВО
+
+# words = [el.strip('.,!?:;-') for el in input().lower().split()]
+#
+# my_dict = {}
+#
+# for el in words:
+#     my_dict[el] = my_dict.get(el, 0) + 1
+#
+# min_value = min(my_dict.values())
+# my_list = []
+# for key, value in my_dict.items():
+#     if value == min_value:
+#         my_list.append(key)
+#
+# print(min(my_list))
+
+
+# САМОЕ РЕДКОЕ СЛОВО (ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ ЛЯМБДА ФУНКЦИЮ)
+
+# st = [i.strip('.,!?:;-') for i in input().lower().split()]
+#
+# print(min(st, key=lambda x: (st.count(x), x)))
+
+
+# ИСПРАВЛЕНИЕ ДУБЛИКАТОВ
+
+# letters = input().split()
+#
+# my_dict = {}
+#
+# for el in letters:
+#     my_dict[el] = my_dict.get(el, 0) + 1
+#     if my_dict[el] == 1:
+#         print(el, end=' ')
+#     else:
+#         print(el + '_' + str(my_dict[el] - 1), end=' ')
+
+
+# ИСПРАВЛЕНИЕ ДУБЛИКАТОВ (ОТ ПОЛЬЗОВАТЕЛЯ)
+# lst = input().split()
+# res = {}
+# for c in lst:
+#     if c in res:
+#         print(f'{c}_{res[c]}', end=' ')
+#     else:
+#         print(c, end=' ')
+#     res[c] = res.get(c, 0) + 1
+
+
+# ИСПРАВЛЕНИЕ ДУБЛИКАТОВ (ОТ ПОЛЬЗОВАТЕЛЯ)
+# d, res = {}, []
+# for w in input().split():
+#     n = d[w] = d.get(w, -1) + 1
+#     res.append(f'{w}_{n}' if n > 0 else w)
+# print(*res)
 
 
 
