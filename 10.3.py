@@ -421,7 +421,44 @@
 #     res.append(f'{w}_{n}' if n > 0 else w)
 # print(*res)
 
+# СТРАНЫ И ГОРОДА
+
+# my_list = []
+#
+# for el in range(int(input())):
+#     my_list.append(input().split())
+#
+# my_dict = {}
+#
+# for el in my_list:
+#     my_dict[tuple(el[1:])] = el[0]
+#
+# for _ in range(int(input())):
+#     x = input()
+#     for key, value in my_dict.items():
+#         if x in key:
+#             print(my_dict[key])
 
 
+# СТРАНЫ И ГОРОДА (ОТ ПОЛЬЗОВАТЕЛЯ) (БЕЗ КОРТЕЖА)
+
+# d = {}
+# for _ in range(int(input())):
+#     country, *cities = input().split()
+#     d.update(dict.fromkeys(cities, country))
+# for _ in range(int(input())):
+#     print(d[input()])
+
+# СТРАНЫ И ГОРОДА (ОТ ПОЛЬЗОВАТЕЛЯ) (ПРОВЕРКА В ЗНАЧЕНИИ И ВЫВОД КЛЮЧА)
+# d = {}
+# for i in range(int(input())):
+#     l = input().split()
+#     d[l[0]] = l[1:]
+#
+# for i in range(int(input())):
+#     k = input()
+#     for key, value in d.items():
+#         if k in value:
+#              print(key)
 
 
