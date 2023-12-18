@@ -107,6 +107,41 @@
 
 
 
+# ТЕЛЕФОННАЯ КНИГА
+
+# my_dict = {}
+#
+# for _ in range(int(input())):
+#     key, value = input().split()
+#     my_dict.setdefault(value.lower(), []).append(key)
+#
+#
+# for _ in range(int(input())):
+#     k = input().lower()
+#     if k in my_dict:
+#         print(*my_dict[k])
+#     else:
+#         print('абонент не найден')
+
+
+# СЕКРЕТНОЕ СЛОВО
+
+word = input()
+
+my_dict_1 = {}
+
+for _ in range(int(input())):
+    key, value = input().split()
+    my_dict_1[int(value)] = key.strip(':')
+
+
+for ch in word:
+    print(my_dict_1.get(word.count(ch)), end='')
+
+
+
+
+
 
 
 
