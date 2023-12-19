@@ -178,11 +178,85 @@
 #
 # result = {int(k): v for k, v in [l.split(':') for l in s.split()]}
 
-numbers = [34, 10, 4, 6, 10, 23, 90, 100, 21, 35, 95, 1, 36, 38, 19, 1, 6, 87, 1000, 13456, 360]
+# ******************
+# numbers = [34, 10, 4, 6, 10, 23, 90, 100, 21, 35, 95, 1, 36, 38, 19, 1, 6, 87, 1000, 13456, 360]
+#
+# result = {el: [j for j in range(1, el + 1) if el % j == 0] for el in numbers}
 
-result = {el: [j for j in range(len(numbers))] for el in numbers if el // 2 == 0}
+# **********(ОТ ПОЛЬЗОВАТЕЛЯ)
+# numbers = [34, 10, 4, 6, 10, 23, 90, 100, 21, 35, 95, 1, 36, 38, 19, 1, 6, 87, 1000, 13456, 360]
+#
+# result = {n: [i for i in range(1, n // 2 + 1) if n % i == 0] + [n] for n in numbers}
 
-print(result)
+# ***********
+# words = ['hello', 'bye', 'yes', 'no', 'python', 'apple', 'maybe', 'stepik', 'beegeek']
+#
+# result = {el: [ord(ch) for ch in el] for el in words}
+
+# ******** (ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ map)
+
+# words = ['hello', 'bye', 'yes', 'no', 'python', 'apple', 'maybe', 'stepik', 'beegeek']
+#
+# result = {el: list(map(ord, el)) for el in words}
+
+# ***********
+# letters = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J', 10: 'K', 11: 'L', 12: 'M',
+#            13: 'N', 14: 'O', 15: 'P', 16: 'Q', 17: 'R', 18: 'S', 19: 'T', 20: 'U', 21: 'V', 22: 'W', 23: 'X', 24: 'Y', 26: 'Z'}
+#
+# remove_keys = [1, 5, 7, 12, 17, 19, 21, 24]
+#
+# result = {key: value for key, value in letters.items() if key not in remove_keys}
+
+# *********** (ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ МНОЖЕСТВА)
+# letters = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H', 8: 'I', 9: 'J', 10: 'K', 11: 'L', 12: 'M',
+#            13: 'N', 14: 'O', 15: 'P', 16: 'Q', 17: 'R', 18: 'S', 19: 'T', 20: 'U', 21: 'V', 22: 'W', 23: 'X', 24: 'Y', 26: 'Z'}
+#
+# remove_keys = [1, 5, 7, 12, 17, 19, 21, 24]
+#
+# result = {k: letters[k] for k in set(letters) - set(remove_keys)}
+
+# # ***************
+# students = {'Timur': (170, 75), 'Ruslan': (180, 105), 'Soltan': (192, 68), 'Roman': (175, 70), 'Madlen': (160, 50),
+#             'Stefani': (165, 70), 'Tom': (190, 90), 'Jerry': (180, 87), 'Anna': (172, 67), 'Scott': (168, 78),
+#             'John': (186, 79), 'Alex': (195, 120), 'Max': (200, 110), 'Barak': (180, 89), 'Donald': (170, 80),
+#             'Rustam': (186, 100), 'Alice': (159, 59), 'Rita': (170, 80), 'Mary': (175, 69), 'Jane': (190, 80)}
+#
+# result = {key: value for key, value in students.items() if value[0] > 167 and value[1] < 75}
+
+# ************
+# tuples = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12), (13, 14, 15), (16, 17, 18), (19, 20, 21), (22, 23, 24),
+#           (25, 26, 27), (28, 29, 30), (31, 32, 33), (34, 35, 36)]
+#
+# result = {el[0]: el[1:] for el in tuples}
+
+# *********(ОТ ПОЛЬЗОВАТЕЛЯ)(РАСПАКОВКА КОРТЕЖА В ПЕРЕМЕННУЮ)
+# tuples = [(1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12), (13, 14, 15), (16, 17, 18), (19, 20, 21), (22, 23, 24),
+#           (25, 26, 27), (28, 29, 30), (31, 32, 33), (34, 35, 36)]
+#
+# result = {i: (*j,) for i, *j in tuples}
+
+# ***********
+# student_ids = ['S001', 'S002', 'S003', 'S004', 'S005', 'S006', 'S007', 'S008', 'S009', 'S010', 'S011', 'S012', 'S013']
+#
+# student_names = ['Camila Rodriguez', 'Juan Cruz', 'Dan Richards', 'Sam Boyle', 'Batista Cesare', 'Francesco Totti',
+#                  'Khalid Hussain', 'Ethan Hawke', 'David Bowman', 'James Milner', 'Michael Owen', 'Gary Oldman', 'Tom Hardy']
+#
+# student_grades = [86, 98, 89, 92, 45, 67, 89, 90, 100, 98, 10, 96, 93]
+
+# result = [{s_id: {name: grade}} for s_id, name, grade in zip(student_ids, student_names, student_grades)]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
