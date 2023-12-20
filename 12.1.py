@@ -121,10 +121,16 @@ import random
 #     password += [chr(random.randint(65, 90)), chr(random.randint(97, 122))][random.randint(0, 1)]
 # print(password)
 
+# *********
 
-
-
-
+# import random
+#
+# my_set = set()
+#
+# while len(my_set) != 7:
+#     my_set.add(random.randint(1, 49))
+#
+# print(*sorted(my_set))
 
 
 
