@@ -198,7 +198,63 @@
 
 
 # *************
-word = input()
+# from random import shuffle as shfl
+#
+# word = input()
+#
+# annagram = []
+#
+# for ch in word:
+#     annagram.append(ch)
+#
+# shfl(annagram)
+# print(''.join(annagram))
+
+# *******(ОТ ПОЛЬЗОВАТЕЛЯ)
+# import random as r
+# w = list(input())
+# r.shuffle(w)
+# print(*w, sep='')
+
+# ********(ОТ ПОЛЬЗОВАТЕЛЯ)
+# import random
+# a = list(input())
+# random.shuffle(a)
+# print(''.join(a))
+
+# ************БИНГО
+# import random
+#
+# numbers = list(range(1, 76))
+#
+# num_line = random.sample(numbers, 25)
+#
+# bingo = [[str(num_line.pop()).ljust(3) for _ in range(5)] for _ in range(5)]
+#
+# bingo[2][2] = str(0).ljust(3)
+#
+# [print(*row, sep='') for row in bingo]
+
+
+# ************БИНГО (ОТ ПРЕПОДАВАТЕЛЯ)
+# from random import sample
+#
+# numbers = sample(list(range(1, 76)), 25)
+# bingo = [numbers[i:i + 5] for i in range(0, 21, 5)]
+# bingo[2][2] = 0
+#
+# for i in range(5):
+#     for j in range(5):
+#         print(str(bingo[i][j]).ljust(3), end=' ')
+#     print()
+
+
+
+
+
+
+
+
 
 
 
