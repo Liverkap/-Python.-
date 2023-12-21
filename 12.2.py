@@ -249,6 +249,88 @@
 #     print()
 
 
+# ГЕНЕРАТОР ПАРОЛЕЙ 1
+
+import random
+import string
+
+# letters = string.ascii_letters + string.digits
+# bad_letters = 'lI1oO0'
+
+# def generate_password(length):
+#     pswd = ''
+#     while len(pswd) != length:
+#         char = random.choice(letters)
+#         if char not in bad_letters:
+#             pswd += char
+#     return pswd
+#
+# def generate_passwords(count, length):
+#     pass
+#
+# pswd_quantity = int(input())
+# pswd_length = int(input())
+#
+# for _ in range(pswd_quantity):
+#     print(generate_password(pswd_length))
+
+
+# ГЕНЕРАТОР ПАРОЛЕЙ 1 (С ИСПОЛЬЗОВАНИЕМ ФУНКЦИЙ)
+
+# import random
+# import string
+#
+# letters = ''.join((set(string.ascii_letters) | set(string.digits)) - set('lI1oO0'))
+#
+# def generate_password(length):
+#     pswd = ''
+#
+#     while len(pswd) != length:
+#         char = random.choice(letters)
+#         pswd += char
+#
+#     return pswd
+#
+# def generate_passwords(count, length):
+#     passwords = []
+#
+#     while len(passwords) != count:
+#         passwords.append(generate_password(length))
+#
+#     return passwords
+#
+# n, m = int(input()), int(input())
+#
+# print(*generate_passwords(n, m), sep='\n')
+
+
+# ГЕНЕРАТОР ПАРОЛЕЙ 1 (ОТ ПОЛЬЗОВАТЕЛЯ)
+
+# from string import ascii_letters, digits
+# from random import choice
+#
+# chars = list(ascii_letters.translate(''.maketrans(dict.fromkeys('lIoO'))) + digits[2:])
+#
+# def generate_password(length):
+#     return ''.join([choice(chars) for _ in range(length)])
+#
+# def generate_passwords(count, length):
+#     result = set()
+#     while len(result) < count:
+#         result.add(generate_password(length))
+#     return list(result)
+#
+# for i in generate_passwords(int(input()), int(input())):
+#     print(i)
+
+
+
+
+
+
+
+
+
 
 
 
