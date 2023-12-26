@@ -325,37 +325,37 @@
 
 # ГЕНЕРАТОР ПАРОЛЕЙ 2
 
-import random
-import string
-
-digits = ''.join(set(string.digits) - set('10'))
-upper_letters = ''.join(set(string.ascii_uppercase) - set('IO'))
-lower_letters = ''.join(set(string.ascii_lowercase) - set('lo'))
-letters = ''.join((set(string.ascii_letters) | set(string.digits)) - set('lI1oO0'))
-
-def generate_password(length):
-    pswd = ''
-    pswd += random.choice(upper_letters)
-    pswd += random.choice(lower_letters)
-    pswd += random.choice(digits)
-
-    while len(pswd) != length:
-        char = random.choice(letters)
-        pswd += char
-
-    return pswd
-
-def generate_passwords(count, length):
-    passwords = []
-
-    while len(passwords) != count:
-        passwords.append(generate_password(length))
-
-    return passwords
-
-n, m = int(input()), int(input())
-
-print(*generate_passwords(n, m), sep='\n')
+# import random
+# import string
+#
+# digits = ''.join(set(string.digits) - set('10'))
+# upper_letters = ''.join(set(string.ascii_uppercase) - set('IO'))
+# lower_letters = ''.join(set(string.ascii_lowercase) - set('lo'))
+# letters = ''.join((set(string.ascii_letters) | set(string.digits)) - set('lI1oO0'))
+#
+# def generate_password(length):
+#     pswd = ''
+#     pswd += random.choice(upper_letters)
+#     pswd += random.choice(lower_letters)
+#     pswd += random.choice(digits)
+#
+#     while len(pswd) != length:
+#         char = random.choice(letters)
+#         pswd += char
+#
+#     return pswd
+#
+# def generate_passwords(count, length):
+#     passwords = []
+#
+#     while len(passwords) != count:
+#         passwords.append(generate_password(length))
+#
+#     return passwords
+#
+# n, m = int(input()), int(input())
+#
+# print(*generate_passwords(n, m), sep='\n')
 
 
 # ГЕНЕРАТОР ПАРОЛЕЙ 2 (ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ СЛОВАРЬ)
