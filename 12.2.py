@@ -323,7 +323,66 @@
 #     print(i)
 
 
+# ГЕНЕРАТОР ПАРОЛЕЙ 2
 
+import random
+import string
+
+digits = ''.join(set(string.digits) - set('10'))
+upper_letters = ''.join(set(string.ascii_uppercase) - set('IO'))
+lower_letters = ''.join(set(string.ascii_lowercase) - set('lo'))
+letters = ''.join((set(string.ascii_letters) | set(string.digits)) - set('lI1oO0'))
+
+def generate_password(length):
+    pswd = ''
+    pswd += random.choice(upper_letters)
+    pswd += random.choice(lower_letters)
+    pswd += random.choice(digits)
+
+    while len(pswd) != length:
+        char = random.choice(letters)
+        pswd += char
+
+    return pswd
+
+def generate_passwords(count, length):
+    passwords = []
+
+    while len(passwords) != count:
+        passwords.append(generate_password(length))
+
+    return passwords
+
+n, m = int(input()), int(input())
+
+print(*generate_passwords(n, m), sep='\n')
+
+
+# ГЕНЕРАТОР ПАРОЛЕЙ 2 (ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ СЛОВАРЬ)
+# def generate_password(length):
+#     import random
+#     dct = {1: 'abcdefghijkmnpqrstuvwxyz',
+#            2: 'ABCDEFGHJKLMNPQRSTUVWXYZ',
+#            3: '23456789',
+#            }
+#     password = [random.choice(dct[1]),
+#                 random.choice(dct[2]),
+#                 random.choice(dct[3])
+#                 ]
+#     while len(password) < length:
+#         password.append(random.choice(dct[random.randint(1, 3)]))
+#     random.shuffle(password)
+#     return ''.join(password)
+#
+#
+# def generate_passwords(count, length):
+#     lst_passwords = [generate_password(length) for _ in range(count)]
+#     return lst_passwords
+#
+#
+# n, m = int(input()), int(input())
+#
+# print(*generate_passwords(n, m), sep='\n')
 
 
 
