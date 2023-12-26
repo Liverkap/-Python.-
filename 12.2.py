@@ -248,11 +248,10 @@
 #         print(str(bingo[i][j]).ljust(3), end=' ')
 #     print()
 
-
 # ГЕНЕРАТОР ПАРОЛЕЙ 1
 
-import random
-import string
+# import random
+# import string
 
 # letters = string.ascii_letters + string.digits
 # bad_letters = 'lI1oO0'
@@ -322,15 +321,6 @@ import string
 #
 # for i in generate_passwords(int(input()), int(input())):
 #     print(i)
-
-
-
-
-
-
-
-
-
 
 
 
