@@ -316,6 +316,47 @@
 # print(*sorted(nums, reverse=True)[:5])
 
 
+# ***************
+# from decimal import *
+# num = Decimal(input())
+#
+#
+# digits = [int(i) for i in str(num) if i != '.' and i != '-']
+#
+# print(min(digits) + max(digits))
+
+
+
+# ************** (ОТ ПОЛЬЗОВАТЕЛЯ)
+# from decimal import *
+# num = Decimal(input())
+# cyphers = num.as_tuple().digits
+# print(max(cyphers) + min(cyphers) * (abs(num) >= 1))
+
+# **************(ОТ ПОЛЬЗОВАТЕЛЯ)
+# # Из модуля decimal импортируем все функции.
+# from decimal import *
+#
+# # Считываем число в формате Decimal.
+# num = Decimal(input())
+#
+# # Сохраняем кортеж из цифр числа.
+# digits = num.as_tuple().digits
+#
+# # Добавляем в кортеж ноль, если число вида: 0.123
+# if len(digits) == abs(num.as_tuple().exponent):
+#     digits = (0, ) + digits
+#
+# # Выводим сумму наименьшего и наибольшего Decimal числа.
+# print(min(digits) + max(digits))
+
+
+# МАТЕМАТИЧЕСКОЕ ВЫРАЖЕНИЕ
+# from decimal import *
+#
+# d = Decimal(input())
+#
+# print(d.exp() + d.ln() + d.log10() + d.sqrt())
 
 
 
