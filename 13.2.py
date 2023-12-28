@@ -1,5 +1,5 @@
 #           *****************       модуль fractions        **********
-
+import math
 # В этом уроке мы изучим числовой тип данных Fraction, который представляет из себя обыкновенную дробь, с заданными числителем и знаменателем
 
 #       ************************    Рациональное число  **********
@@ -229,9 +229,67 @@
 # for op in operators:
 #     print(f'{a} {op} {b} = {operators[op](*ops)}')
 
+# СУММА ДРОБЕЙ 1
+# from fractions import Fraction as F
+#
+# n = int(input())
+# sum = 0
+#
+# for i in range(1, n + 1):
+#     sum += (F(1, i ** 2))
+#
+# print(F(sum))
 
 
+# СУММА ДРОБЕЙ 1 (ОТ ПОЛЬЗОВАТЕЛЯ)
+# from fractions import Fraction as F
+#
+# print(sum([F(1, i**2) for i in range(1, int(input()) + 1)]))
 
+
+# СУММА ДРОБЕЙ 2
+# from fractions import Fraction as F
+# from math import factorial
+#
+# numbers = [F(1, factorial(i)) for i in range(1, int(input()) + 1)]
+#
+# print(sum(numbers))
+
+# СУММА ДРОБЕЙ 2 (ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ ЗАЦИКЛЕННУЮ ФУНКЦИЮ)
+# from fractions import Fraction
+# a = int(input())
+# s = 0
+# def factorial(a: int):
+#     if a == 1:
+#         return 1
+#     return a * factorial(a-1)
+# for i in range(1, a+1):
+#     s += Fraction(1, factorial(i))
+# print(s)
+
+# СУММА ДРОБЕЙ 2 (ОТ ПОЛЬЗОВАТЕЛЯ)(БЕЗ ИСПОЛЬЗОВАНИЯ ФАКТОРИАЛА)
+# from fractions import Fraction
+#
+# n = int(input())
+#
+# factor = 1
+# s = 0
+# for i in range(1, n + 1):
+#     factor *= i
+#     s += Fraction(1, factor)
+#
+# print(s)
+
+# ЮНЫЙ МАТЕМАТИК
+from fractions import Fraction as F
+from math import gcd
+
+n = int(input())
+
+numbers = [i for i in range(1, n)]
+print(numbers)
+
+print(math.gcd(3, 5))
 
 
 
