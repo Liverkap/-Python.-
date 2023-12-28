@@ -1,5 +1,5 @@
 #           *****************       модуль fractions        **********
-import math
+# import math
 # В этом уроке мы изучим числовой тип данных Fraction, который представляет из себя обыкновенную дробь, с заданными числителем и знаменателем
 
 #       ************************    Рациональное число  **********
@@ -281,15 +281,93 @@ import math
 # print(s)
 
 # ЮНЫЙ МАТЕМАТИК
-from fractions import Fraction as F
-from math import gcd
+# from fractions import Fraction as F
+# import math
+#
+#
+# n = int(input())
+#
+# numbers = [i for i in range(1, n)]
+#
+# my_list = []
+#
+# for i in range(len(numbers)):
+#     for j in range(1, len(numbers)):
+#         if numbers[i] + numbers[j] == n and numbers[i] < numbers[j] and math.gcd(numbers[i], numbers[j]) == 1:
+#             my_list.append(F(numbers[i], numbers[j]))
+#
+#
+# print(max(my_list))
 
-n = int(input())
+# ЮНЫЙ МАТЕМАТИК (ОТ ПОЛЬЗОВАТЕЛЯ)
 
-numbers = [i for i in range(1, n)]
-print(numbers)
+# from fractions import Fraction as F
+# from math import gcd
+#
+# n = int(input())
+# a = n // 2
+# b = n - a
+#
+# while gcd(a, b) != 1:
+#     a -= 1
+#     b += 1
+# print(F(a, b))
 
-print(math.gcd(3, 5))
+#  ЮНЫЙ МАТЕМАТИК (ОТ ПОЛЬЗОВАТЕЛЯ)( УЛУЧШЕН ВЫШЕЛЕЖАЩИЙ КОД)
+# from math import gcd
+#
+# n = int(input())
+# i = n // 2
+# while gcd(i, n - i) != 1:
+#     i -= 1
+# print(f'{i}/{n - i}')
+
+
+# ЮНЫЙ МАТЕМАТИК (ОТ ПОЛЬЗОВАТЕЛЯ)
+# from fractions import Fraction
+# from math import gcd
+#
+# n = int(input())
+# lst = []
+#
+# for i in range(1, n-1):
+#     for j in range(i+1, n):
+#         k = Fraction(i, j)      #т.к. тут дробь сокращается автоматом, условие будет короткое
+#         if k.numerator + k.denominator == n:
+#             lst.append(Fraction(i, j))
+#
+# print(max(lst))
+
+# УПОРЯДОЧЕННЫЕ ДРОБИ
+# from fractions import Fraction as F
+# from math import gcd
+#
+# n = int(input())
+#
+# my_list = []
+#
+# for i in range(1, n + 1):
+#     for j in range(n, 0, -1):
+#         k = F(i, j)
+#         if k.numerator < k.denominator and gcd(i, j) == 1:
+#             my_list.append(F(i, j))
+# #
+# #
+# print(*sorted(my_list), sep='\n')
+
+# УПОРЯДОЧЕННЫЕ ДРОБИ (ОТ ПОЛЬЗОВАТЕЛЯ)
+# from fractions import Fraction
+#
+# numbers = set()
+#
+# for i in range(2, int(input()) + 1):
+#     for j in range(1, i):
+#         numbers.add(Fraction(j, i))
+#
+# print(*sorted(numbers), sep='\n')
+
+
+
 
 
 
