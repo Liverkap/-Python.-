@@ -421,21 +421,22 @@
 
 # ИНТЕРЕСНАЯ СОРТИРОВКА-2
 
-def compare_sum(num):
-    return sum([int(ch) for ch in num])
-
-# def compare_2(num):
-#     return min(num)
-
-numbers = sorted([num for num in input().split()], key=compare_sum)
-
-print(numbers)
+# def compare_sum(num):
+#     return sum([int(ch) for ch in str(num)])
+#
+#
+# numbers = sorted([int(num) for num in input().split()])
+#
 # print(*sorted(numbers, key=compare_sum))
-print(*sorted(numbers, key=min)
+#
 
-# print(numbers)
-
-
+# # ИНТЕРЕСНАЯ СОРТИРОВКА-2(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def comparator(n):
+#     return sum([int(i) for i in str(n)]), n
+#
+# numbers = [int(i) for i in input().split()]
+#
+# print(*sorted(numbers, key=comparator))
 
 
 
