@@ -359,7 +359,81 @@
 
 
 # МАТЕМАТИЧЕСКИЕ ФУНКЦИИ
+# from math import sin
+#
+# def get_num_square(num):
+#     return num ** 2
+#
+# def get_num_cube(num):
+#     return num ** 3
+#
+# def get_square_root_of_num(num):
+#     return num ** 0.5
+#
+# def get_num_abs(num):
+#     return abs(num)
+#
+# def get_sin_of_num(num):
+#     return sin(num)
+#
+# func = {'квадрат': get_num_square, 'куб': get_num_cube, 'корень': get_square_root_of_num, 'модуль': get_num_abs, 'синус': get_sin_of_num}
+#
+# num, function_name = int(input()), input()
+#
+# print(func[function_name](num))
 
+# МАТЕМАТИЧЕСКИЕ ФУНКЦИИ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# import math
+#
+# def pwr(p):
+#   def numpower(n):
+#     return n**p
+#   return numpower
+#
+# commands = {"квадрат": pwr(2), "куб": pwr(3), "корень": pwr(0.5), "модуль": abs, "синус": math.sin}
+#
+# n = int(input())
+# command = input()
+# print(commands[command](n))
+
+# ИНТЕРЕСНАЯ СОРТИРОВКА-1
+
+# def compare(num):
+#     sum = 0
+#     for ch in num:
+#         sum += int(ch)
+#
+#     return sum
+#
+# numbers = input().split()
+#
+# print(*sorted(numbers, key=compare))
+
+
+# ИНТЕРЕСНАЯ СОРТИРОВКА-1 (ОТ ПРЕПОДАВАТЕЛЯ)(СУММА ЧЕРЕЗ СПИСОК)
+# def comparator(n):
+#     return sum([int(i) for i in str(n)])
+#
+# numbers = [int(i) for i in input().split()]
+#
+# print(*sorted(numbers, key=comparator))
+
+
+# ИНТЕРЕСНАЯ СОРТИРОВКА-2
+
+def compare_sum(num):
+    return sum([int(ch) for ch in num])
+
+# def compare_2(num):
+#     return min(num)
+
+numbers = sorted([num for num in input().split()], key=compare_sum)
+
+print(numbers)
+# print(*sorted(numbers, key=compare_sum))
+print(*sorted(numbers, key=min)
+
+# print(numbers)
 
 
 
