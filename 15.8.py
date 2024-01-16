@@ -145,4 +145,96 @@
 # for key, value in d.items():
 #     print(value, ': ', key, sep='')
 
+# ***********
+# data = ['год', 'человек', 'время', 'дело', 'жизнь', 'день', 'рука', 'раз', 'работа', 'слово', 'место', 'лицо', 'друг',
+#         'глаз', 'вопрос', 'дом', 'сторона', 'страна', 'мир', 'случай', 'голова', 'ребенок', 'сила', 'конец', 'вид',
+#         'система', 'часть', 'город', 'отношение', 'женщина', 'деньги']
+#
+# data_sort = sorted(data, key=lambda x: x)
+# data_sort.sort(key=len)
+# print(*data_sort)
+#
+# # **********(ОТ ПОЛЬЗОВАТЕЛЯ)(len(x), x) - это кортеж. Кортежи сравниваются во первым элементам, а если первые элементы равны - по вторым
+# print(*sorted(data, key=lambda x: (len(x), x)))
+#
+# # **********(ОТ ПОЛЬЗОВАТЕЛЯ)
+# data.sort()
+# result = sorted(data, key=lambda x: len(x))
+#
+# print(*result)
+
+# ***********
+# mixed_list = ['tuesday', 'abroad', 'abuse', 'beside', 'monday', 'abate', 'accessory', 'absorb', 1384878, 'sunday', 'about',
+#               454805, 'saturday', 'abort', 2121919, 2552839, 977970, 1772933, 1564063, 'abduct', 901271, 2680434,
+#               'bicycle', 'accelerate', 1109147, 942908, 'berry', 433507, 'bias', 'bestow', 1875665, 'besides', 'bewilder',
+#               1586517, 375290, 1503450, 2713047, 'abnormal', 2286106, 242192, 701049, 2866491, 'benevolent', 'bigot',
+#               'abuse', 'abrupt', 343772, 'able', 2135748, 690280, 686008, 'beyond', 2415643, 'aboard', 'bet', 859105,
+#               'accident', 2223166, 894187, 146564, 1251748, 2851543, 1619426, 2263113, 1618068, 'berth', 'abolish',
+#               'beware', 2618492, 1555062, 'access', 'absent', 'abundant', 2950603, 'betray', 'beverage', 'abide',
+#               'abandon', 2284251, 'wednesday', 2709698, 'thursday', 810387, 'friday', 2576799, 2213552, 1599022,
+#               'accept', 'abuse', 'abound', 1352953, 'bid', 1805326, 1499197, 2241159, 605320, 2347441]
+#
+#
+# # result = max(filter(lambda x: type(x) is int, mixed_list))
+# # print(result)
+#
+# # **********(ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ УСЛОВИЕ, ЧТО БЫ ПРОБЕЖАТЬ ВЕСЬ СПИСОК)
+# result = max(mixed_list, key=lambda x: x if type(x) is int else 0)
+# print(result)
+#
+# # *********(ОТ ПОЛЬЗОВАТЕЛЯ)(И ИСПОЛЬЗОВАНИЕМ КОРТЕЖА)
+# print(max(mixed_list, key=lambda x: (isinstance(x, int), x)))
+
+
+# *************
+# mixed_list = ['beside', 48, 'accelerate', 28, 'beware', 'absorb', 'besides', 'berry', 15, 65, 'abate', 'thursday',
+#               76, 70, 94, 35, 36, 'berth', 41, 'abnormal', 'bicycle', 'bid', 'sunday', 'saturday', 87, 'bigot', 41,
+#               'abort', 13, 60, 'friday', 26, 13, 'accident', 'access', 40, 26, 20, 75, 13, 40, 67, 12, 'abuse', 78, 10, 80,
+#               'accessory', 20, 'bewilder', 'benevolent', 'bet', 64, 38, 65, 51, 95, 'abduct', 37, 98, 99, 14, 'abandon',
+#               'accept', 46, 'abide', 'beyond', 19, 'about', 76, 26, 'abound', 12, 95, 'wednesday', 'abundant', 'abrupt',
+#               'aboard', 50, 89, 'tuesday', 66, 'bestow', 'absent', 76, 46, 'betray', 47, 'able', 11]
+#
+# list_sort = sorted(mixed_list, key=lambda x: str(x))
+# print(*list_sort)
+#
+# # *******(ОТ ПОЛЬЗОВАТЕЛЯ)(И ИСПОЛЬЗОВАНИЕМ КОРТЕЖА)
+# print(*sorted(mixed_list, key=lambda x: (isinstance(x, str), x)))
+#
+# # *******(ОТ ПОЛЬЗОВАТЕЛЯ)(И ИСПОЛЬЗОВАНИЕМ СРАВНЕНИЯ КОРТЕЖА)
+# print(*sorted(mixed_list, key=lambda x: (type(x) is str, x)))
+#
+# # **********(ОТ ПОЛЬЗОВАТЕЛЯ)
+# print(*sorted(mixed_list, key=lambda x:(type(x).__name__, x)))
+
+
+# ПРОТИВОПОЛОЖНЫЙ ЦВЕТ
+
+# print(*list(map(lambda x: 255 - int(x), input().split())))
+#
+# # **********(ОТ ПОЛЬЗОВАТЕЛЯ)
+# print(*map(int.__sub__, (255,) * 3, map(int, input().split())))
+# __sub__ это магический метод (magic (or dunder - double-underscore) method) стоящий за опертором вычитания -.
+# Поскольку для класса int определено вычитание, то можно сослатся на его магический метод в качестве аргумента
+# функции map чтобы не расписывать lambda функцию. В качестве более универсальной альтернативы можно взять одноименные методы из модуля operator:
+
+
+# ЗНАЧЕНИЕ МНОГОЧЛЕНА
+
+# from functools import reduce
+#
+# def evaluate(cff, x):
+#     indx = range(len(cff))[::-1]
+#     lst = list(map(lambda num, i: int(num) * x ** i, cff, indx))
+#     return reduce(lambda a, b: a + b, lst)
+#
+# n = input().split()
+# x = int(input())
+#
+# print(evaluate(n, x))
+#
+# # ЗНАЧЕНИЕ МНОГОЧЛЕНА(ОТ ПОЛЬЗОВАТЕЛЯ)
+# from functools import reduce as r
+#
+# evaluate = lambda coefficients, x: r(lambda v, c: c + v * x, map(int, coefficients))
+# print(evaluate(input().split(), int(input())))
 
