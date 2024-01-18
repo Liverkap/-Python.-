@@ -251,15 +251,51 @@
 # print(len(list(zip(words1, words2, words3))))
 
 # **********
-def ignore_command(command):
-    ignore = ['alias', 'configuration', 'ip', 'sql', 'select', 'update', 'exec', 'del', 'truncate']
-    return any(map(lambda x: x in command, ignore))
+# def ignore_command(command):
+#     ignore = ['alias', 'configuration', 'ip', 'sql', 'select', 'update', 'exec', 'del', 'truncate']
+#     return any(map(lambda x: x in command, ignore))
+#
+#
+# print(ignore_command('get ip'))
+# print(ignore_command('select all'))
+# print(ignore_command('delete'))
+# print(ignore_command('trancate'))
+
+# *******
+# countries = ['Russia', 'USA', 'UK', 'Germany', 'France', 'India']
+# capitals = ['Moscow', 'Washington', 'London', 'Berlin', 'Paris', 'Delhi']
+# population = [145_934_462, 331_002_651, 80_345_321, 67_886_011, 65_273_511, 1_380_004_385]
+#
+#
+# for country, city, popul in zip(countries, capitals, population):
+#     print(f'{city} is the capital of {country}, population equal {popul} people.')
+#
+# # ********(ОТ ПОЛЬЗОВАТЕЛЯ)
+# for data in zip(countries, capitals, population):
+#     print('{1} is the capital of {0}, population equal {2} people.'.format(*data))
 
 
-print(ignore_command('get ip'))
-print(ignore_command('select all'))
-print(ignore_command('delete'))
-print(ignore_command('trancate'))
+# ВНУТРИ ШАРА
+
+# abscissas = [float(num) for num in input().split()]
+# ordinates = [float(num) for num in input().split()]
+# applicates = [float(num) for num in input().split()]
+#
+# R = 2
+#
+# res = all(list(map(lambda x: x[0] ** 2 + x[1] ** 2 + x[2] ** 2 <= R ** 2, zip(abscissas, ordinates, applicates))))
+# print(res)
+#
+# # ВНУТРИ ШАРА(ОТ ПОЛЬЗОВАТЕЛЯ)
+# abscissas = list(map(float, input().split()))
+# ordinates = list(map(float, input().split()))
+# applicates = list(map(float, input().split()))
+#
+# print(all(map(lambda x, y, z: x**2 + y**2 + z**2 <= 4, abscissas, ordinates, applicates)))
+
+
+
+
 
 
 
