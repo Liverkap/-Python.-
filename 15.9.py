@@ -294,9 +294,154 @@
 # print(all(map(lambda x, y, z: x**2 + y**2 + z**2 <= 4, abscissas, ordinates, applicates)))
 
 
+# КОРРЕКТНЫЙ IP АДРЕС
+
+# print(all(map(lambda x: x.isdigit() and int(x) <= 255, [num for num in input().split('.')])))
+
+# КОРРЕКТНЫЙ IP АДРЕС(ОТ ПОЛЬЗОВАТЕЛЯ)
+# print(all(x.isdigit() and int(x) < 256 for x in input().split('.')))
+
+
+# ИНТЕРЕСНЫЕ ЧИСЛА
+
+# a, b = int(input()), int(input())
+# a = int(input())
+
+# a_list = [int(num) for num in input() if num != '0']
+# b_list = [int(num) for num in input() if num != '0']
+# print(a_list)
+# print(b_list)
+
+# div_num = set(int(num) for num in str(a) if num != '0') | set(int(num) for num in str(b) if num != '0')
+# print(div_num)
+
+# def check(num):
+#     return lambda x: num % int(x) == 0, str(num)
+#
+# numbers = list(range(a, b + 1))
+# li = list(filter(check, numbers))
+# print(li)
+#
+# # res = list(map(, div_num, numbers))
+# # k = []
+# # for num in numbers:
+# #     if all(num % int(x) == 0 for x in str(num)):
+# #         k.append(num)
+# #
+# # print(k)
+
+# numbers = [i for i in range(int(input()), int(input()) + 1) if '0' not in list(str(i))]
+#
+# def check(num):
+#     return all(map(lambda el: num % int(el) == 0, str(num)))
+#
+# print(*filter(check, numbers))
+
+# ИНТЕРЕСНЫЕ ЧИСЛА(ОТ ПРЕПОДАВАТЕЛЯ)
+# a, b = int(input()), int(input())
+#
+# for i in range(a, b + 1):
+#     # создаем кортеж со всеми цифрами числа
+#     digits = tuple(map(int, str(i)))
+#     print(digits)
+#
+#     # проверяем, что число не содержит 0 и делится на все свои цифры
+#     if 0 not in digits and all(map(lambda cur_digit: i % cur_digit == 0, digits)):
+#         print(i, end=" ")
+
+
+# ИНТЕРЕСНЫЕ ЧИСЛА(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def check(num):
+#     return all(map(lambda x: int(x) and num % int(x) == 0, str(num)))
+#
+# a, b = int(input()), int(input())
+# seq = range(a, b + 1)
+# print(*list(filter(lambda x: check(x), seq)))
+
+
+# ХОРОШИЙ ПАРОЛЬ
+
+# password = input()
+#
+# psw = all([len(password) >= 7, any(map(lambda x: x.isdigit(), password)), any(map(lambda x: x.islower(), password)), any(map(lambda x: x.isupper(), password))])
+#
+# if psw:
+#     print('YES')
+#
+# else:
+#     print('NO')
+
+# ХОРОШИЙ ПАРОЛЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# s = input()
+# print('YES' if all((any(i.isupper() for i in s),
+#                     any(i.islower() for i in s),
+#                     any(i.isdigit() for i in s),
+#                     len(s) >= 7)) else 'NO')
+#
+# # ХОРОШИЙ ПАРОЛЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# s = input()
+# print(('YES', 'NO')[any([len(s) < 7, s.islower(), s.isupper(),s.isalpha(), s.isdigit()])])
+
+
+# ХОРОШИЙ ПАРОЛЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def is_good_password(password):
+#     if len(password) < 7:         # Проверяем пароль на длину
+#         return "NO"
+#     flag = [False, False, False]  # Создаём флаг-список для проверки пароля на наличие определённых элементов
+#     for i in password:
+#         if all(flag):             # Если все значения станут равны True до прохода по всему паролю, прерываем функцию
+#             return "YES"
+#         elif i.isdigit():         # Если элемент является цифрой, меняем нулевой элемент флаг-списка на True
+#             flag[0] = True
+#         elif i.isupper():         # Если элемент является заглавной буквой, меняем первый элемент флаг-списка на True
+#             flag[1] = True
+#         elif i.islower():         # Если элемент является строчной буквой, меняем второй элемент флаг-списка на True
+#             flag[2] = True
+#     if all(flag):                 # После завершения цикла проверяем флаг-список, чтобы все значения были равны True
+#         return "YES"
+#     return "NO"
+#
+#
+# qwerty = input()
+# print(is_good_password(qwerty))
+
+
+# ОТЛИЧНИКИ
+
+classes = int(input())
+
+new_list = []
+
+for classes in range(classes):
+    cur_list = []
+    for j in range(int(input())):
+        cur_list.append(input().split())
+    new_list.append(cur_list)
+
+print(new_list)
 
 
 
 
+
+# classes, students = int(input()), int(input())
+# # my_list = [i for i in input().split()]
+# # print(my_list)
+#
+# new_list = []
+#
+# for classes in range(classes):
+#     for j in range(students):
+#         new_list.append(input().split())
+#
+# print(new_list)
+
+
+
+# for i in range(students):
+#     std = dict()
+#     x = input().split()
+#     std[x[1]] = x[0]
+#     my_list.append(std)
 
 
