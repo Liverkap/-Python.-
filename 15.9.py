@@ -408,40 +408,53 @@
 
 # ОТЛИЧНИКИ
 
-classes = int(input())
-
-new_list = []
-
-for classes in range(classes):
-    cur_list = []
-    for j in range(int(input())):
-        cur_list.append(input().split())
-    new_list.append(cur_list)
-
-print(new_list)
-
-
-
-
-
-# classes, students = int(input()), int(input())
-# # my_list = [i for i in input().split()]
-# # print(my_list)
+# n = int(input())
+# list_of_classes = []
 #
-# new_list = []
+# while n != 0:
+#     res = []
+#     for _ in range(int(input())):
+#         student = input().split()
+#         res.append(student[1])
+#     list_of_classes.append(res)
+#     n -= 1
 #
-# for classes in range(classes):
-#     for j in range(students):
-#         new_list.append(input().split())
+# exl_stud = all(list(map(lambda x: '5' in x, list_of_classes)))
 #
-# print(new_list)
+#
+# if exl_stud:
+#     print('YES')
+# else:
+#     print('NO')
 
 
+# ОТЛИЧНИКИ(ОТ ПРЕПОДАВАТЕЛЯ)
+# n = int(input())
+# students = []
+# for _ in range(n):
+#     m = int(input())
+#     temp = []
+#     for _ in range(m):
+#         surname, mark = input().split()
+#         temp.append((surname, int(mark)))
+#     students.append(temp)
+#
+# result = all(map(lambda x: any(map(lambda y: y[1] == 5, x)), students))
+# print('YES' if result else 'NO')
 
-# for i in range(students):
-#     std = dict()
-#     x = input().split()
-#     std[x[1]] = x[0]
-#     my_list.append(std)
+# ОТЛИЧНИКИ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# print(('NO','YES')[all([any(['5' in input()[-1] for k in range(int(input()))]) for _ in range(int(input()))])])
+#
+# # ОТЛИЧНИКИ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# n = int(input())
+# l = [[int(input().split()[1]) for i in range(int(input()))] for i in range(n)]
+#
+# print('YES' if all(map(lambda x: 5 in x, l)) else 'NO')
+
+# ОТЛИЧНИКИ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# num = int(input())
+# jun = [[input().endswith("5") for i in range(int(input()))] for j in range(num)]
+# print(["NO", "YES"][all(any(i) for i in jun)])
+
 
 
