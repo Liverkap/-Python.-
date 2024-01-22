@@ -77,6 +77,49 @@
 # file.close()
 
 
+# ОБЩАЯ СТОИМОСТЬ
+
+# file = open('prices.txt', 'r', encoding='utf-8')
+#
+# res = sum(map(lambda x: int(x[1]) * int(x[2]), map(lambda x: x.replace('\t', ' ').rstrip('\n').split(), file)))
+# print(res)
+#
+# file.close()
+#
+# # ОБЩАЯ СТОИМОСТЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# file = open('prices.txt')
+# lines = map(str.split, file)
+# print(sum(map(lambda line: int(line[1]) * int(line[2]), lines)))
+# file.close()
+#
+#
+# # ОБЩАЯ СТОИМОСТЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# file = open('prices.txt', 'r', encoding='utf-8')
+# s = 0
+# for line in file:
+#     tovar, count, price = line.split()
+#     s += int(count) * int(price)
+# print(s)
+# file.close()
 
 
+# ОБЩАЯ СТОИМОСТЬ(ОТ МЕНЯ)
+
+# file = open('prices.txt', 'r', encoding='utf-8')
+#
+# content = [int(count) * int(price) for name, count, price in map(str.split, file)]
+#
+# print(sum(content))
+#
+# file.close()
+
+
+# ОБЩАЯ СТОИМОСТЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# from functools import reduce
+#
+# file = open("prices.txt", encoding="utf-8")
+# prods = [ x.split() for x in file.readlines()]
+# amount = reduce(lambda a,b:  a + int(b[1]) * int(b[2]), prods, 0)
+# print(amount)
+# file.close()
 
