@@ -1,5 +1,5 @@
 #                                       работа с текстовыми файлами
-
+import random
 #                                       Позиция в файле
 
 # Вызов методов read(), readlines(), readline() перемещает текущую позицию туда, где завершилось чтение.
@@ -213,21 +213,142 @@
 
 # СУММА ЧИСЕЛ В ФАЙЛЕ
 
-with open('nums.txt', encoding='utf-8') as f:
-    content = [el.split() for el in f.readlines()]
-    # content = f.readlines()
-    #
-    print(content)
+# with open('nums.txt', encoding='utf-8') as f:
+#     content = f.readlines()
+#     nums = ''
+#
+#     for el in content:
+#         for ch in el:
+#             if ch.isdigit():
+#                 nums += ch
+#             else:
+#                 nums += ' '
+#     res = sum([int(el) for el in nums.split()])
+#
+#     print(res)
+#
+# # СУММА ЧИСЕЛ В ФАЙЛЕ(ОТ ПРЕПОДАВАТЕЛЯ)
+# with open('numbers.txt') as file:
+#     temp = ''
+#     n = 0
+#     for c in file.read():
+#         if c.isdigit():
+#             temp += c
+#         elif temp != '':
+#             n += int(temp)
+#             temp = ''
+#     print(n)
+#
+# # СУММА ЧИСЕЛ В ФАЙЛЕ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('numbers.txt', encoding='utf-8') as file:
+#     row = ''.join(c if c.isdigit() else ' ' for c in file.read())
+#     print(sum(map(int, row.split())))
+#
+# # СУММА ЧИСЕЛ В ФАЙЛЕ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('nums.txt') as file:
+#     cont = file.read()
+#     for i in filter(lambda x: not x.isdigit(), cont):
+#         cont = cont.replace(i, ' ')
+#     print(sum(map(int, cont.split())))
+
+
+# СТАТИСТИКА ПО ФАЙЛУ
+
+# with open('file.txt', encoding='utf-8') as f:
+#     content = [el.split() for el in f.readlines()]
+#     count_letters = 0
+#     count_words = 0
+#     count_string = len(content)
+#     symbols_to_remove = '.,"'
+#
+#     for string in content:
+#         count_words += len(string)
+#         for el in string:
+#             word = ''.join(list(filter(lambda x: x.isalpha() and x not in symbols_to_remove, el)))
+#             count_letters += len(word)
+#
+#     print(f'Input file contains:\n'
+#           f'{count_letters} letters\n'
+#           f'{count_words} words\n'
+#           f'{count_string} lines')
 
 
 
+# test_text = '''Beautiful is better than ugly.
+# Explicit is better than implicit.
+# Simple is better than complex.
+# Complex is better than complicated.'''
+#
+# with open('input.txt', 'w') as f:
+#     f.write(test_text)
+#
+# with open('input.txt', encoding='utf-8') as f:
+#     content = [el.split() for el in f.readlines()]
+#     count_letters = 0
+#     count_words = 0
+#     count_string = len(content)
+#
+#     for string in content:
+#         count_words += len(string)
+#         for el in string:
+#             count_letters += len(el)
+#
+#     print(f'Input file contains:\n'
+#           f'{count_letters}\n'
+#           f'{count_words}\n'
+#           f'{count_string}')
+
+# СТАТИСТИКА ПО ФАЙЛУ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('file.txt') as f:
+#     txt = f.read()
+#     print('Input file contains:')
+#     print(sum(map(str.isalpha, txt)), 'letters')
+#     print(len(txt.split()), 'words')
+#     print(txt.count('\n') + 1, 'lines')
+
+# СТАТИСТИКА ПО ФАЙЛУ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('file.txt') as file:
+#     counts = dict(letters=0, words=0, lines=0)
+#     for line in file:
+#         counts['lines'] += 1
+#         for word in line.split():
+#             counts['words'] += 1
+#             for symbol in word:
+#                 counts['letters'] += symbol.isalpha()
+#
+# print('Input file contains:', *(f'\n{counts[k]} {k}' for k in counts), sep='')
+
+# СТАТИСТИКА ПО ФАЙЛУ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('file.txt') as f:
+#     print('Input file contains:')
+#     print(len(list(filter(lambda x: x.isalpha(), f.read()))), 'letters')
+#     f.seek(0)
+#     print(len(f.read().split()), 'words')
+#     f.seek(0)
+#     print(len(list(f.readlines())), 'lines')
+#
+# # СТАТИСТИКА ПО ФАЙЛУ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# letters, words, lines = 0, 0, 0
+# with open('file.txt', 'r', encoding='utf-8') as file:
+#     for line in file:
+#         lines += 1
+#         words += len(line.split())
+#         for ch in line:
+#             if ch.isalpha():
+#                 letters += 1
+# print('Input file contains:')
+# print(letters, 'letters')
+# print(words, 'words')
+# print(lines, 'lines')
 
 
+# RANDOM NAME AND SURNAME
+import random
 
-
-
-
-
+with open('first_names.txt', encoding='utf-8') as name_1, open('last_names.txt', encoding='utf-8') as name_2:
+    name = name_1.readlines()
+    last_name = name_2.readlines()
+    print(f'{random.choice(name).rstrip()} {random.choice(last_name).rstrip()}')
 
 
 
