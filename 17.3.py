@@ -343,14 +343,36 @@ import random
 
 
 # RANDOM NAME AND SURNAME
-import random
+# import random
+#
+# with open('first_names.txt', encoding='utf-8') as name_1, open('last_names.txt', encoding='utf-8') as name_2:
+#     name = name_1.readlines()
+#     last_name = name_2.readlines()
+#     for _ in range(3):
+#         print(f'{random.choice(name).rstrip()} {random.choice(last_name).rstrip()}')
 
-with open('first_names.txt', encoding='utf-8') as name_1, open('last_names.txt', encoding='utf-8') as name_2:
-    name = name_1.readlines()
-    last_name = name_2.readlines()
-    print(f'{random.choice(name).rstrip()} {random.choice(last_name).rstrip()}')
+# RANDOM NAME AND SURNAME(ОТ ПОЛЬЗОВАТЕЛЯ)
+# import random as r
+#
+# with open('first_names.txt') as fn, open('last_names.txt') as ln:
+#     first_name = fn.read().split()
+#     last_name = ln.read().split()
+#
+# [print(*i) for i in list(zip(r.sample(first_name, 3), r.sample(last_name, 3)))]
+
+# RANDOM NAME AND SURNAME(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('first_names.txt', 'r', encoding='utf-8') as f:
+#     fn = set(f.read().split())
+#
+# with open('last_names.txt', 'r', encoding='utf-8') as f:
+#     ln = set(f.read().split())
+#
+# for i in range(3):
+#     print(f'{fn.pop()} {ln.pop()}')
 
 
+# НЕОБЫЧНЫЕ СТРАНЫ
+with open('population.txt', encoding='utf-8') as f:
 
 
 
