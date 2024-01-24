@@ -130,17 +130,17 @@ import random
 
 # ОБРАТНЫЙ ПОРЯДОК
 
-# with open('data.txt', encoding='utf-8') as file:
+# with open('data_old.txt', encoding='utf-8') as file:
 #     content = file.readlines()
 #     for el in reversed(content):
 #         print(el.rstrip())
 #
 # # ОБРАТНЫЙ ПОРЯДОК(ОТ ПОЛЬЗОВАТЕЛЯ)
-# with open('data.txt', encoding='utf-8') as file:
+# with open('data_old.txt', encoding='utf-8') as file:
 #     print(*file.readlines()[::-1], sep='')
 
 # ОБРАТНЫЙ ПОРЯДОК(ОТ ПОЛЬЗОВАТЕЛЯ)
-# with open('data.txt', encoding='UTF-8') as file:
+# with open('data_old.txt', encoding='UTF-8') as file:
 #     for i in file.readlines()[::-1]:
 #         print(i.strip())
 
@@ -372,7 +372,74 @@ import random
 
 
 # НЕОБЫЧНЫЕ СТРАНЫ
-with open('population.txt', encoding='utf-8') as f:
+# with open('population.txt', encoding='utf-8') as f:
+#     content = list(map(str.strip, f.readlines()))
+#     new_dict = {}
+#     for el in content:
+#         key, value = el.split('\t')
+#         new_dict[key] = int(value)
+#
+#     for key, value in new_dict.items():
+#         if key.startswith('G') and value > 500_000:
+#             print(key)
+#
+#
+# # НЕОБЫЧНЫЕ СТРАНЫ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('population.txt') as f:
+#     for line in f:
+#         n, p = line.split('\t')
+#         if n.startswith('G') and int(p) > 500000:
+#             print(n)
+#
+# # НЕОБЫЧНЫЕ СТРАНЫ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('population.txt', 'r', encoding='utf-8') as file:
+#     countries = list(filter(lambda x: x.startswith('G') and int(x.split()[-1]) > 500_000, file.readlines()))
+#     [print(i.split()[0]) for i in countries]
 
+
+# CSV-ФАЙЛ
+# def read_csv():
+#     with open('data.csv', encoding='utf-8') as f:
+#         key_dict = f.readline().rstrip().split(',')
+#         content = [el.rstrip().split(',') for el in f.readlines()]
+#
+#         new_list = []
+#
+#         for el in content:
+#             x = dict(zip(key_dict, el))
+#             new_list.append(x)
+#
+#         return new_list
+#
+# # CSV-ФАЙЛ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def read_csv():
+#     with open('data.csv') as file:
+#         keys = file.readline().strip().split(',')
+#         return [dict(zip(keys, line.strip().split(','))) for line in file]
+#
+# # CSV-ФАЙЛ(ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ ИМПОРТ)
+# import csv
+# def read_csv():
+#     with open('data.csv') as csv_file:
+#         reader = csv.DictReader(csv_file)
+#         return [row for row in reader]
+#
+#
+# # CSV-ФАЙЛ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def read_csv():
+#     lst = []
+#     with open('data.csv') as file:
+#         keys = file.readline().strip().split(',')
+#         for line in file:
+#             values = line.strip().split(',')
+#             lst.append(dict(zip(keys, values)))
+#     return lst
+
+
+# CSV-ФАЙЛ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def read_csv():
+#     with open('data.csv') as file:
+#         file = tuple(map(lambda x: x.strip().split(','), file))
+#         return [dict(zip(file[0], i)) for i in file[1:]]
 
 
