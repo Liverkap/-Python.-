@@ -1,4 +1,4 @@
-                                    # работа с текстовыми файлами
+import random  # работа с текстовыми файлами
 # Урок посвящен работе с файлами. Мы изучим методы записи в файл write() и writelines()
 
 #                                   Запись данных в файлы
@@ -100,5 +100,47 @@
 # with open('words_2.txt', 'w') as output:
 #     print('stepik', 'beegeek', 'iq-option', sep='*', end='+\n', file=output)
 #     print('python', file=output)
+
+# # ВХОДНАЯ СТРОКА
+# with open('output_17.3.txt', 'w', encoding='utf-8') as f:
+#     f.write(input())
+#
+# # ВХОДНАЯ СТРОКА(ОТ ПОЛЬЗОВАТЕЛЯ)
+# print(input(), file=open('output_17.3.txt', 'w'))
+#
+# # ВХОДНАЯ СТРОКА(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('output_17.3.txt', 'w') as file:
+#     print(input(), file=file)
+
+# СЛУЧАЙНЫЕ ЧИСЛА
+# from random import randint
+#
+#
+# with open('random.txt', 'w', encoding='utf') as f:
+#     for _ in range(25):
+#         print(randint(111, 777), end='\n', file=f)
+
+# СЛУЧАЙНЫЕ ЧИСЛА(ОТ ПОЛЬЗОВАТЕЛЯ)
+# from random import*
+# with open('random.txt', 'w', encoding='utf-8') as file:
+#     for i in range(25):
+#         file.write(str(randint(111,777))+'\n')
+
+
+# НУМЕРАЦИЯ СТРОК
+
+# with open('input.txt', 'r', encoding='utf-8') as input_f, open('output.txt', 'w', encoding='utf-8') as output_f:
+#     num = 1
+#     for line in input_f:
+#         print(f'{num}) {line}', end='', file=output_f)
+#         num += 1
+#
+# # НУМЕРАЦИЯ СТРОК(ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ enumerate)
+# with open('input.txt') as inp, open('output.txt', 'w') as out:
+#     for i, j in enumerate(inp, start=1):
+#         print(f'{i}) {j}', end='', file=out)
+
+
+
 
 

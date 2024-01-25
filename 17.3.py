@@ -99,10 +99,10 @@ import random
 # print('Файл закрыт')
 
 # С помощью менеджера контекста можно работать с несколькими файлами.
-# with open('input.txt', 'r') as input_file, open('output.txt', 'w') as output_file:
+# with open('input_17.3.txt', 'r') as input_file, open('output_17.3.txt', 'w') as output_file:
 #     # обработка файлов
 
-# with open('input.txt', encoding='utf-8') as file:
+# with open('input_17.3.txt', encoding='utf-8') as file:
 #     print('Repeat after me:', file.readline().strip())
 #     for line in file:
 #         print(line.strip() + '!')
@@ -113,10 +113,10 @@ import random
 # the
 # weasel!'''
 #
-# with open('input.txt', 'w') as f:
+# with open('input_17.3.txt', 'w') as f:
 #     f.write(text)
 #
-# with open('input.txt', encoding='utf-8') as file:
+# with open('input_17.3.txt', encoding='utf-8') as file:
 #     print('Repeat after me:', file.readline().strip())
 #     for line in file:
 #         print(line.strip() + '!')
@@ -279,10 +279,10 @@ import random
 # Simple is better than complex.
 # Complex is better than complicated.'''
 #
-# with open('input.txt', 'w') as f:
+# with open('input_17.3.txt', 'w') as f:
 #     f.write(test_text)
 #
-# with open('input.txt', encoding='utf-8') as f:
+# with open('input_17.3.txt', encoding='utf-8') as f:
 #     content = [el.split() for el in f.readlines()]
 #     count_letters = 0
 #     count_words = 0
