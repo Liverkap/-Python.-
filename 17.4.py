@@ -141,6 +141,60 @@ import random  # работа с текстовыми файлами
 #         print(f'{i}) {j}', end='', file=out)
 
 
+# ПОДАРОК НА НОВЫЙ ГОД
+
+# with open('class_scores.txt', encoding='utf-8') as inp, open('new_scores.txt', 'w', encoding='utf-8') as out:
+#     content = inp.readlines()
+#
+#     for el in content:
+#         key, value = el.strip().split()
+#         if int(value) + 5 >= 100:
+#             print(f'{key} {100}', file=out)
+#         else:
+#             print(f'{key} {int(value)+ 5}', end='\n', file=out)
+
+# ПОДАРОК НА НОВЫЙ ГОД (ОТ ПРЕПОДАВАТЕЛЯ)
+# with open('class_scores.txt') as class_scores, open('new_scores.txt', 'w') as new_scores:
+#     for line in class_scores:
+#         name, score = line.split()
+#         score = int(score) + 5
+#         if score > 100:
+#             score = 100
+#         print(name, score, file=new_scores)
+
+# ПОДАРОК НА НОВЫЙ ГОД (ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('class_scores.txt') as inn:
+#     inner = inn.readlines()
+# with open('new_scores.txt', 'w') as out:
+#     for i in inner:
+#         a, b = i.split()
+#         out.write(f'{a} {int(b) + 5 if int(b) <= 95 else 100}\n')
+#
+# # ПОДАРОК НА НОВЫЙ ГОД (ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ min)
+# with open('class_scores.txt') as i, open('new_scores.txt', 'w') as o:
+#     for _ in i.readlines():
+#         n, s = _.split()
+#         print(f'{n} {min(int(s) + 5, 100)}', file=o)
+
+
+# ЗАГАДКА ОТ ЖАКА ФРЕСКО
+
+with open('goats.txt', encoding='utf-8') as goats, open('answer.txt', 'w', encoding='utf-8') as answer:
+    goats.seek(0)
+    content = []
+
+    for line in goats:
+        if line.rstrip().lower() == 'goats':
+            break
+        else:
+            content.append(line.rstrip())
+
+    content_2 = []
+
+    print(content)
+    print(content_2)
+
+    # while line.lower() != 'goats':
 
 
 
