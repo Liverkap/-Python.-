@@ -129,14 +129,14 @@ import random  # работа с текстовыми файлами
 
 # НУМЕРАЦИЯ СТРОК
 
-# with open('input.txt', 'r', encoding='utf-8') as input_f, open('output.txt', 'w', encoding='utf-8') as output_f:
+# with open('input.txt', 'r', encoding='utf-8') as input_f, open('output_17.4_1.txt', 'w', encoding='utf-8') as output_f:
 #     num = 1
 #     for line in input_f:
 #         print(f'{num}) {line}', end='', file=output_f)
 #         num += 1
 #
 # # НУМЕРАЦИЯ СТРОК(ОТ ПОЛЬЗОВАТЕЛЯ)(ЧЕРЕЗ enumerate)
-# with open('input.txt') as inp, open('output.txt', 'w') as out:
+# with open('input.txt') as inp, open('output_17.4_1.txt', 'w') as out:
 #     for i, j in enumerate(inp, start=1):
 #         print(f'{i}) {j}', end='', file=out)
 
@@ -179,22 +179,89 @@ import random  # работа с текстовыми файлами
 
 # ЗАГАДКА ОТ ЖАКА ФРЕСКО
 
-with open('goats.txt', encoding='utf-8') as goats, open('answer.txt', 'w', encoding='utf-8') as answer:
-    goats.seek(0)
-    content = []
+# with open('goats.txt', encoding='utf-8') as goats, open('answer.txt', 'w', encoding='utf-8') as answer:
+#     content = goats.readlines()
+#     colours_list = sorted(content[1:7])
+#     goats_list = content[8:]
+#
+#     for i in range(len(colours_list)):
+#         if (goats_list.count(colours_list[i]) / len(goats_list)) * 100 > 7.5:
+#             answer.write(colours_list[i])
 
-    for line in goats:
-        if line.rstrip().lower() == 'goats':
-            break
-        else:
-            content.append(line.rstrip())
+# ЗАГАДКА ОТ ЖАКА ФРЕСКО(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('goats.txt') as f1, open('answer.txt', 'w') as f2:
+#     cont = f1.read().split('\n')
+#     colors, goats = cont[1:cont.index('GOATS')], cont[cont.index('GOATS')+1:]
+#     print(*sorted(filter(lambda x: goats.count(x) / len(goats) > 0.07, colors)), sep='\n', file=f2)
 
-    content_2 = []
+# ЗАГАДКА ОТ ЖАКА ФРЕСКО(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('goats.txt', 'rt', encoding='utf-8') as fg1, \
+#         open('answer.txt', 'wt', encoding='utf-8') as ans1:
+#     goats = {}
+#     for line in fg1:
+#         goats[line.strip()] = goats.get(line.strip(), -1) + 1
+#     total = sum(goats.values())
+#     for k, v in goats.items():
+#         if v > total * 0.07:
+#             print(k, file=ans1)
 
-    print(content)
-    print(content_2)
 
-    # while line.lower() != 'goats':
+# КОНКАТЕНАЦИЯ ФАЙЛОВ
+
+# with open('output_17.4_2.txt', 'w', encoding='utf-8') as out:
+#     for i in range(int(input())):
+#         file_name = input()
+#         with open(f'{file_name}', encoding='utf=8') as file:
+#             for line in file:
+#                 out.write(line)
+#
+#
+# # КОНКАТЕНАЦИЯ ФАЙЛОВ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('output_17.4_2.txt', 'w') as out:
+#     for i in range(int(input())):
+#         with open(input()) as f:
+#             out.write(f.read())
+
+
+# ЛОГ ФАЙЛ
+
+# with open('logfile.txt', encoding='utf-8') as file, open('output.txt', 'w', encoding='utf-8') as out:
+#     for line in file:
+#         content = line.rstrip().split(', ')
+#         last_time = int(content[2][:2]) * 60 + int(content[2][3:])
+#         first_time = int(content[1][:2]) * 60 + int(content[1][3:])
+#         if last_time - first_time >= 60:
+#             out.write(content[0] + '\n')
+
+
+# ЛОГ ФАЙЛ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def get_diff_mins(time2, time1):
+#     t2 = list(map(int, time2.split(':')))
+#     t1 = list(map(int, time1.split(':')))
+#     return (t2[0]*60 + t2[1]) - (t1[0]*60 + t1[1])
+#
+# with open('logfile.txt', encoding='utf-8') as inputf, open('output.txt', 'w') as outputf:
+#     for fn in inputf:
+#         name, time1, time2 = fn.strip().split(', ')
+#         if get_diff_mins(time2, time1) >= 60:
+#             print(name, file=outputf)
+
+# ЛОГ ФАЙЛ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# with open('logfile.txt',encoding='utf-8') as fr, open('output.txt','a',encoding='utf-8') as fw:
+#     for line in fr:
+#          name, st, en = line.split(', ')
+#          if int(en.replace(':','')) - int(st.replace(':','')) >= 100:
+#             print(name,file = fw)
+
+# ЛОГ ФАЙЛ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# from datetime import datetime
+#
+# with open('logfile.txt', encoding='utf-8') as logfile, open('output.txt', 'w') as output:
+#     for log in logfile.read().split('\n'):
+#         name, first_time, second_time = log.split(', ')
+#         delta = datetime.strptime(second_time, "%H:%M") - datetime.strptime(first_time, "%H:%M")
+#         if delta.seconds >= 3600:
+#             print(name, file=output)
 
 
 
