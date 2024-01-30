@@ -87,7 +87,7 @@ import random  # работа с текстовыми файлами
 # используете команду with при работе с файлами, вам не придется беспокоиться об их закрытии. Команда with автоматически закрывает файл за вас
 
 #
-# with open('words.txt', 'w') as file:
+# with open('words_3.txt', 'w') as file:
 #     file.write('delphi+')
 #     file.write('java')
 
