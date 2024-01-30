@@ -30,34 +30,24 @@
 
 # КООРДИНАТНЫЕ ЧЕТВЕРТИ (ОТ ПРЕПОДАВАТЕЛЯ)
 
-n = int(input())
-
-count = [0] * 4
-names = ['Первая четверть:', 'Вторая четверть:', 'Третья четверть:', 'Четвертая четверть:']
-
-for _ in range(n):
-    x, y = [int(num) for num in input().split()]
-    if x > 0 and y > 0:
-        count[0] += 1
-    elif x < 0 and y > 0:
-        count[1] += 1
-    elif x < 0 and y < 0:
-        count[2] += 1
-    elif x > 0 and y < 0:
-        count[3] += 1
-
-for i in range(4):
-    print(names[i], count[i])
-
-
-
-
-
-
-
-
-
-
+# n = int(input())
+#
+# count = [0] * 4
+# names = ['Первая четверть:', 'Вторая четверть:', 'Третья четверть:', 'Четвертая четверть:']
+#
+# for _ in range(n):
+#     x, y = [int(num) for num in input().split()]
+#     if x > 0 and y > 0:
+#         count[0] += 1
+#     elif x < 0 and y > 0:
+#         count[1] += 1
+#     elif x < 0 and y < 0:
+#         count[2] += 1
+#     elif x > 0 and y < 0:
+#         count[3] += 1
+#
+# for i in range(4):
+#     print(names[i], count[i])
 
 
 # БОЛЬШЕ ПРЕДЫДУЩЕГО
@@ -268,14 +258,48 @@ for i in range(4):
 #     check_list = []
 #     holod = []
 #     for j in range(len(my_list[i])):
-#         #holod = []
+#         # holod = []
 #         if my_list[i][j] in virus:
-#             holod += my_list[i][j]
+#             holod.append(my_list[i][j])
+#             # holod += my_list[i][j]
 #     #print(holod)
 #     if ''.join(holod) == virus:
 #         ''.join(holod)
 #         v.append(my_list.index(my_list[i]) + 1)
 # print(*v)
+
+
+
+n = int(input())
+
+my_list = []
+
+for _ in range(n):
+    my_list.append(input())
+
+virus = 'anton'
+v = []
+
+for i in range(len(my_list)):
+    # holod = []
+    holod = ''
+    for j in range(len(my_list[i])):
+        # holod = []
+        if my_list[i][j] in virus:
+            # holod.append(my_list[i][j])
+            if my_list[i][j] not in holod:
+                holod += my_list[i][j]
+            else:
+                continue
+    #print(holod)
+    if holod == virus:
+        v.append(my_list.index(my_list[i]) + 1)
+print(*v)
+
+
+
+
+
 
 
 

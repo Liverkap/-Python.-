@@ -108,17 +108,50 @@
 
 # STANDART AMERICAN CONVENTION (ОТ ПРЕПОДАВАТЕЛЯ)
 
-seq = list(input())
+# seq = list(input())
+#
+# new_s = ''
+#
+# while len(seq) >= 3:
+#     new_s += seq.pop(-1) + seq.pop(-1) + seq.pop(-1) + ','
+#
+# new_s += ''.join(seq[::-1])
+#
+# new_s = new_s[::-1]
+# new_s = new_s.lstrip(',')
+#
+# print(new_s)
 
-new_s = ''
 
-while len(seq) >= 3:
-    new_s += seq.pop(-1) + seq.pop(-1) + seq.pop(-1) + ','
+# ЗАДАЧА ИОСИФА ФЛАВЕЛЯ
 
-new_s += ''.join(seq[::-1])
+# n, k = int(input()), int(input())
+#
+# new_list = list(range(1, n + 1))
+#
+# while len(new_list) > 1:
+#     for _ in range(1, k):
+#         temp = new_list.pop(0)
+#         new_list.append(temp)
+#     new_list.pop(0)
+#
+# print(*new_list)
 
-new_s = new_s[::-1]
-new_s = new_s.lstrip(',')
 
-print(new_s)
+# ЗАДАЧА ИОСИФА ФЛАВЕЛЯ(ОТ ПРЕПОДАВАТЕЛЯ)
+# n = int(input())
+# k = int(input())
+#
+# res = 0
+# for i in range(1, n + 1):
+#     res = (res + k) % i
+# print(res + 1)
+
+# ЗАДАЧА ИОСИФА ФЛАВЕЛЯ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def joseph(n, k):
+#     return 1 if n == 1 else (joseph(n - 1, k) + k - 1) % n + 1
+#
+# print(joseph(int(input()), int(input())))
+
+
 
