@@ -244,71 +244,81 @@
 
 # КРЕМНИЕВАЯ ДОЛИНА
 
-# n = int(input())
-#
-# my_list = []
-#
-# for _ in range(n):
-#     my_list.append(input())
+# my_list = [input() for _ in range(int(input()))]
 #
 # virus = 'anton'
-# v = []
+# count = 0
 #
-# for i in range(len(my_list)):
-#     check_list = []
-#     holod = []
-#     for j in range(len(my_list[i])):
-#         # holod = []
-#         if my_list[i][j] in virus:
-#             holod.append(my_list[i][j])
-#             # holod += my_list[i][j]
-#     #print(holod)
-#     if ''.join(holod) == virus:
-#         ''.join(holod)
-#         v.append(my_list.index(my_list[i]) + 1)
-# print(*v)
+# for el in my_list:
+#     count += 1
+#     indx = 0
+#     for ch in el:
+#         if virus[indx] == ch:
+#             indx += 1
+#         if indx == len(virus):
+#             print(count, end=' ')
+#             break
 
+# КРЕМНИЕВАЯ ДОЛИНА(ОТ ПРЕПОДАВАТЕЛЯ)
 
+# n = int(input())
+# for i in range(n):
+#     seq = ["a", "n", "t", "o", "n"]
+#     s = list(input())
+#
+#     while seq and s:  # пока у нас непустые список из букв строки и список слова "anton"
+#         if seq[0] == s[0]:  # если буквы равны, то вырываем и там, и там
+#             seq.pop(0)
+#             s.pop(0)
+#         else:  # иначе вырываем только из списка букв строки
+#             s.pop(0)
+#
+#     # если список букв слова "anton" пустой, значит вырвали все буквы,
+#     # значит в строке встретились все эти буквы в нужном нам порядке
+#     if not seq:
+#         print(i + 1, end=" ")
 
-n = int(input())
+# КРЕМНИЕВАЯ ДОЛИНА(ОТ ПРЕПОДАВАТЕЛЯ)(ЧЕРЕЗ РЕГУЛЯРНЫЕ ВЫРАЖЕНИЯ)
+# import re
+#
+# n = int(input())
+# for i in range(n):
+#     s = input()
+#     if re.fullmatch(r".*a.*n.*t.*o.*n.*", s):
+#         print(i + 1, end=" ")
 
-my_list = []
-
-for _ in range(n):
-    my_list.append(input())
-
-virus = 'anton'
-v = []
-
-for i in range(len(my_list)):
-    # holod = []
-    holod = ''
-    for j in range(len(my_list[i])):
-        # holod = []
-        if my_list[i][j] in virus:
-            # holod.append(my_list[i][j])
-            if my_list[i][j] not in holod:
-                holod += my_list[i][j]
-            else:
-                continue
-    #print(holod)
-    if holod == virus:
-        v.append(my_list.index(my_list[i]) + 1)
-print(*v)
-
-
-
-
-
-
+# КРЕМНИЕВАЯ ДОЛИНА(ОТ ПРЕПОДАВАТЕЛЯ)
+# for i in range(1, int(input())+1):
+#     name = ['a', 'n', 't', 'o', 'n', None]
+#     s = input()
+#     for c in s:
+#         if c == name[0]:
+#             del name[0]
+#     if len(name) == 1:
+#         print(i, end=' ')
 
 
 # РОСКОМНАДЗОР ЗАПРЕТИЛ БУКВУ А
 
-# string = input() + ' ' + 'запретил букву'
+# word = input() + ' запретил букву'
 # alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 #
-# print(string)
+# count = 0
+# while len(alphabet) != count:
+#     for ch in alphabet:
+#         if ch in word:
+#             print(f'{word.replace("  ", " ").strip()} {ch}')
+#             x = word.replace(ch, '')
+#             word = x
+#     count += 1
 
+# РОСКОМНАДЗОР ЗАПРЕТИЛ БУКВУ А(ОТ ПРЕПОДАВАТЕЛЯ)
+# word = input() + ' запретил букву'
+# alpha = [chr(i) for i in range(1072, 1104)]
+#
+# for letter in alpha:
+#     if letter in word:
+#         print(word, letter)
+#         word = word.replace(letter, '').replace('  ', ' ').strip()
 
 
