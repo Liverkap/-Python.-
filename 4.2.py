@@ -121,3 +121,6 @@
 #     counter += len(li)
 #
 # print(total / counter)
+
+
+

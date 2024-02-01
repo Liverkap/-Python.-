@@ -164,57 +164,190 @@
 
 # ТРЕУГОЛЬНИК ПАСКАЛЯ
 
-
-
 # from math import factorial
-# n = int(input())
-#
-# my_list = [1] * (n + 1)
-#
-#
-# for i in range(1, n):
-# # for j in range(i):
-#     my_list[i] = factorial(n) // (factorial(my_list[i]) * factorial(n - my_list[i]))
-#
-# print(my_list)
-
-
-# ТРЕУГОЛЬНИК ПАСКАЛЯ 2
-
 # n = int(input())
 #
 # my_list = []
 #
-# for i in range(n):
-#     new_list = []
-#     for j in range(i + 1):
-#         new_list.append(i)
-#         my_list.append(new_list)
-#     print(my_list)
+# for i in range(n + 1):
+#     my_list.append(factorial(n) // (factorial(i) * factorial(n - i)))
+#
+# print(my_list)
+
+# ТРЕУГОЛЬНИК ПАСКАЛЯ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# -------------------ФУНКЦИЯ-------------------
+# def pascal(n):
+#     triangle = [[1]]
+#
+#     for i in range(n):
+#         row = [1]
+#         for j in range(1, len(triangle[i])):
+#             row += [sum(triangle[i][j - 1: j + 1])]
+#         row += [1]
+#         triangle.append(row.copy())
+#
+#     return triangle[n]
+
+
+# --------------------ВЫЗОВ--------------------
+# print(pascal(int(input())))
+
+
+# ТРЕУГОЛЬНИК ПАСКАЛЯ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def pascal(n):
+#     # начальная строка
+#     cur_seq = [1]
+#
+#     for _ in range(n):
+#         # добавляем нули по бокам к текущей строке строке
+#         cur_seq = [0] + cur_seq + [0]
+#         # тут будет храниться новая строка
+#         new_seq = []
+#
+#         for i in range(len(cur_seq) - 1):
+#             # добавляем в новую строку сумму соседних элементов текущей строки
+#             new_seq.append(cur_seq[i] + cur_seq[i + 1])
+#
+#         # теперь новая строка становится нашей текущей строкой
+#         cur_seq = new_seq
+#
+#     return cur_seq
+#
+#
+# n = int(input())
+# print(pascal(n))
+
+
+
+# ТРЕУГОЛЬНИК ПАСКАЛЯ 2
+
+# def pascal(n):
+#     # начальная строка
+#     cur_seq = [1]
+#
+#     for _ in range(n):
+#         print(*cur_seq)
+#         # добавляем нули по бокам к текущей строке строке
+#         cur_seq = [0] + cur_seq + [0]
+#         # тут будет храниться новая строка
+#         new_seq = []
+#
+#         for i in range(len(cur_seq) - 1):
+#             # добавляем в новую строку сумму соседних элементов текущей строки
+#             new_seq.append(cur_seq[i] + cur_seq[i + 1])
+#
+#         # теперь новая строка становится нашей текущей строкой
+#         cur_seq = new_seq
+#
+#
+# n = int(input())
+# pascal(n)
+
+
+# def pascal(n):
+#     # результирующая таблица
+#     seq = [[1]]
+#     # начальная строка
+#     cur_seq = [1]
+#
+#     for _ in range(n - 1):
+#         # добавляем нули по бокам к текущей строке строке
+#         cur_seq = [0] + cur_seq + [0]
+#         # тут будет храниться новая строка
+#         new_seq = []
+#
+#         for i in range(len(cur_seq) - 1):
+#             # добавляем в новую строку сумму соседних элементов текущей строки
+#             new_seq.append(cur_seq[i] + cur_seq[i + 1])
+#
+#         # теперь новая строка становится нашей текущей строкой
+#         cur_seq = new_seq
+#         # добавляем текущую строку в результирующую таблицу
+#         seq.append(cur_seq)
+#
+#     return seq
+#
+#
+# n = int(input())
+# seq = pascal(n)
+#
+# # выводим таблицу по строкам
+# for s in seq:
+#     print(*s)
 
 
 # УПАКОВКА ДУБЛИКАТОВ
 
 # s = input().split()
 #
-# print(s)
-# my_list = []
+# res = [[s[0]]]
 #
-# for i in range(len(s)):
-#     my_list.append([s[i]])
+# for i in range(1, len(s)):
+#     if s[i] == s[i - 1]:
+#         res[-1].append(s[i])
+#     else:
+#         res.append([s[i]])
 #
-# print(my_list)
+# print(res)
+#
+# # УПАКОВКА ДУБЛИКАТОВ(ОТ ПРЕПОДАВАТЕЛЯ)
+#
+# s = input().split()
+# # кидаем первый символ в наш список, также удалив его из входного списка
+# seq = [[s.pop(0)]]
+#
+# for c in s:
+#     if c in seq[-1]:
+#         seq[-1].append(c)
+#     else:
+#         seq.append([c])
+#
+# print(seq)
+
+# РАЗБИЕНИЕ НА ЧАНКИ
+
+# def chunked(n, lst):
+#     seq = []
+#
+#     for i in range(0, len(lst), n):
+#         x = lst[i: i + n]
+#         seq.append(x)
+#
+#     print(seq)
+#
+#
+# symbols = input().split()
+# n = int(input())
+#
+# chunked(n, symbols)
+#
+#
+# # РАЗБИЕНИЕ НА ЧАНКИ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def chunked(lst, n):
+#     new = []
+#     for i in range(len(lst)):
+#         if i % n == 0:
+#             new.append([lst[i]])
+#         else:
+#             new[-1].append(lst[i])
+#     return new
+#
+# list_for_chunk = input().split()
+# print(chunked(list_for_chunk, int(input())))
+
+# РАЗБИЕНИЕ НА ЧАНКИ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def chunked(x):
+#     c, b = a, []
+#     while c != []:
+#         b.append(c[:x])
+#         c = c[x:]
+#     return b
+#
+# a = input().split()
+# print(chunked(int(input())))
 
 
-# s = [[i] for i in range(len(input().split()))]
-#
-# s = [[c] for c in input().split()]
-#
-# my_list = []
-#
-# for i in range(len(s)):
-#     if s[i] == s[i + 1]:
-#         my_list[i] = s[i + 1]
-#
-#
-# print(s)
+
+
+
+
