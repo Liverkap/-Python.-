@@ -347,7 +347,26 @@
 # print(chunked(int(input())))
 
 
+# ПОДСПИСКИ СПИСКА
 
-
+# s = input().split()
+#
+# new_list = [[]]
+#
+# for i in range(1, len(s) + 1):
+#     for j in range(len(s) + 1 - i):
+#         x = s[j:j + i]
+#         new_list.append(x)
+#
+# print(new_list)
+#
+# # ПОДСПИСКИ СПИСКА (ОТ ПОЛЬЗОВАТЕЛЯ)
+# s = input().split()
+# a = [[]]
+# for i in range(1, len(s)+1):
+#     for j in range(len(s)):
+#         if i == len(s[j:j+i]):
+#             a.append(s[j:j+i])
+# print(a)
 
 
