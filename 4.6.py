@@ -215,3 +215,90 @@
 #         print(str(matr[i][j]).ljust(3), end='')
 #     print()
 
+# ЗАПОЛНЕНИЕ 4
+
+# n = int(input())
+#
+# matrix = [[0] * n for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if (i <= j and i <= n - j - 1) or (i >= j and i >= n - j - 1):
+#             matrix[i][j] = 1
+#
+# for row in matrix:
+#     print(*row)
+
+# ЗАПОЛНЕНИЕ 4(ОТ ПРЕПОДАВАТЕЛЯ)
+# n = int(input())
+# matrix = [[0] * n for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if (i <= j and i + j + 1 <= n) or (i >= j and i + j + 1 >= n):
+#             matrix[i][j] = 1
+#
+# for i in range(n):
+#     for j in range(n):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+
+# ЗАПОЛНЕНИЕ 5
+
+# n, m = [int(num) for num in input().split()]
+#
+# matrix = [[0] * m for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(m):
+#         matrix[i][j] = (i + j) % m + 1
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+
+# ЗАПОЛНЕНИЕ ЗМЕЙКОЙ
+
+# n, m = [int(num) for num in input().split()]
+#
+# matrix = [[0] * m for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(m):
+#         if i % 2 == 0:
+#             matrix[i][j] = i * m + j + 1
+#         else:
+#             matrix[i][j] = (i + 1) * m - j
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+# ЗАПОЛНЕНИЕ ЗМЕЙКОЙ(ОТ ПРЕПОДАВАТЕЛЯ)
+# n, m = [int(i) for i in input().split()]
+# matrix = [[0] * m for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(m):
+#         matrix[i][j] = i * m + j + 1
+#     if i % 2:
+#         matrix[i].reverse()
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
+
+# ЗАПОЛНЕНИЕ ЗМЕЙКОЙ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# n, m = map(int, input().split())
+# matrix = [range(m*i+1, m*i+1 + m)[::i%2*-2+1] for i in range(n)]
+# [print(*row) for row in matrix]
+
+
+
+
+
