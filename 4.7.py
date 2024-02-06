@@ -109,3 +109,79 @@
 
 
 
+# matrix = [[1, 0], [4, 1]]
+# new_matrix = [[None] * len(matrix[0]) for _ in range(len(matrix[1]))]
+#
+# for q in range(25):
+#     for i in range(len(matrix[0])):
+#         for j in range(len(matrix[1])):
+#             new_matrix[i][j] = matrix[i][j] * matrix[j][i]
+#
+#
+# print(new_matrix)
+
+
+# СЛОЖЕНИЕ МАТРИЦ
+
+# n, m = [int(num) for num in input().split()]
+#
+# mtrx_1 = [[int(num) for num in input().split()] for _ in range(n)]
+# input()
+# mtrx_2 = [[int(num) for num in input().split()] for _ in range(n)]
+# res_mtrx = [[None] * m for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(m):
+#         res_mtrx[i][j] = mtrx_1[i][j] + mtrx_2[i][j]
+#
+# for row in res_mtrx:
+#     print(*row)
+
+
+# УМНОЖЕНИЕ МАТРИЦ
+
+# n, m = [int(num) for num in input().split()]
+#
+# matrix_A = [[int(num) for num in input().split()] for _ in range(n)]
+# input()
+#
+# m, k = [int(num) for num in input().split()]
+# matrix_B = [[int(num) for num in input().split()] for _ in range(m)]
+# matrix_C = [[0] * k for _ in range(n)]
+#
+#
+# for i in range(n):
+#     for j in range(k):
+#         for r in range(m):
+#             matrix_C[i][j] += matrix_A[i][r] * matrix_B[r][j]
+#
+# for row in matrix_C:
+#     print(*row)
+
+
+# ВОЗВЕДЕНИЕ МАТРИЦЫ В СТЕПЕНЬ
+import copy
+n = int(input())
+
+matrix = [[int(num) for num in input().split()] for _ in range(n)]
+m = int(input())
+# res_matrix = [[1] * n for _ in range(n)]
+res_matrix = copy.deepcopy(matrix)
+print(res_matrix)
+x = copy.deepcopy(res_matrix)
+print(x)
+matrix[1][2] = 256
+print(matrix)
+print(res_matrix)
+
+# while m != 1:
+#     cur_matrix = copy.deepcopy(res_matrix)
+#     for i in range(n):
+#         for j in range(n):
+#             for r in range(n):
+#                 res_matrix[i][j] += cur_matrix[i][r] * matrix[r][j]
+#     m -= 1
+#
+#
+# for row in res_matrix:
+#     print(*row)
