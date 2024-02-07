@@ -160,28 +160,94 @@
 
 
 # ВОЗВЕДЕНИЕ МАТРИЦЫ В СТЕПЕНЬ
-import copy
-n = int(input())
-
-matrix = [[int(num) for num in input().split()] for _ in range(n)]
-m = int(input())
-# res_matrix = [[1] * n for _ in range(n)]
-res_matrix = copy.deepcopy(matrix)
-print(res_matrix)
-x = copy.deepcopy(res_matrix)
-print(x)
-matrix[1][2] = 256
-print(matrix)
-print(res_matrix)
-
-# while m != 1:
+# import copy
+# n = int(input())
+#
+# matrix = [[int(num) for num in input().split()] for _ in range(n)]
+# m = int(input())
+# res_matrix = [[0] * n for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         for r in range(n):
+#             res_matrix[i][j] += matrix[i][r] * matrix[r][j]
+#
+#
+# while m != 2:
 #     cur_matrix = copy.deepcopy(res_matrix)
+#     new_mat = [[0] * n for _ in range(n)]
 #     for i in range(n):
 #         for j in range(n):
 #             for r in range(n):
-#                 res_matrix[i][j] += cur_matrix[i][r] * matrix[r][j]
+#                 new_mat[i][j] += cur_matrix[i][r] * matrix[r][j]
+#
+#     res_matrix = copy.deepcopy(new_mat)
 #     m -= 1
 #
 #
 # for row in res_matrix:
+#     print(*row)
+
+
+# ВОЗВЕДЕНИЕ МАТРИЦЫ В СТЕПЕНЬ(ОТ ПРЕПОДАВАТЕЛЯ)
+# def square_matrix_mult(matrixA, matrixB, size):
+#     matrixC = [[0] * size for _ in range(size)]
+#     for i in range(size):
+#         for j in range(size):
+#             for q in range(size):
+#                 matrixC[i][j] += matrixA[i][q] * matrixB[q][j]
+#     return matrixC
+#
+#
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# m = int(input())
+# powered_matrix = matrix.copy()
+#
+# for _ in range(m - 1):
+#     powered_matrix = square_matrix_mult(matrix, powered_matrix, n)
+#
+# for row in powered_matrix:
+#     print(*row)
+
+# ВОЗВЕДЕНИЕ МАТРИЦЫ В СТЕПЕНЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# n = int(input())
+# matrix_1 = [[int(i) for i in input().split()] for _ in range(n)]
+# m = int(input())
+# matrix_2 = matrix_1
+# matrix = [[0] * n for _ in range(n)]
+#
+# for _ in range(m - 1):
+#     for i in range(n):
+#         for j in range(n):
+#             for x in range(n):
+#                 matrix[i][j] += matrix_1[i][x] * matrix_2[x][j]
+#     matrix_1 = matrix
+#     matrix = [[0] * n for _ in range(n)]
+#
+# for row in matrix_1:
+#     print(*row)
+
+# ВОЗВЕДЕНИЕ МАТРИЦЫ В СТЕПЕНЬ(ОТ ПОЛЬЗОВАТЕЛЯ)
+# def matrix_mult(m1, m2, n):
+#     return [[sum(m1[i][k] * m2[k][j] for k in range(n)) for j in range(n)] for i in range(n)]
+#
+#
+# n = int(input())
+# a = [[*map(int, input().split())] for _ in range(n)]
+# # в качестве начального значения создаём единичную матрицу E
+# # у которой на главной диагонали все единицы. Она играет роль
+# # единицы при умножении матриц, т.е. E * A = A
+# res = [[0] * n for _ in range(n)]
+# for i in range(n):
+#     res[i][i] = 1
+#
+# m = int(input())
+# while m:
+#     if m % 2 != 0:
+#         res = matrix_mult(res, a, n)  # умножение на матрицу a
+#     a = matrix_mult(a, a, n)  # возведение в квадрат
+#     m //= 2
+#
+# for row in res:
 #     print(*row)
